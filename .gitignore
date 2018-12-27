@@ -1,0 +1,17 @@
+# Environments
+.idea
+
+# Python
+*$py.class
+*.py[cod]
+.Python
+
+__pycache__/
+downloads/
+wheels/
+build/
+dist/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
