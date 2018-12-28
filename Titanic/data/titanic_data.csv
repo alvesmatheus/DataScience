@@ -1,0 +1,892 @@
+ID,Nome,Idade,Sexo,Sobrevivente,Pais e Filhos,Irmãos e Cônjuges,Classe,Passagem,Local de Embarque,Tarifa,Cabine
+1,Mr. Owen Harris Braund,22.0,Masculino,False,0,1,3ª,A/5 21171,Southampton,7.25,
+2,Mrs. John Bradley Florence Briggs Thayer Cumings,38.0,Feminino,True,0,1,1ª,PC 17599,Cherbourg,71.2833,C85
+3,Miss. Laina Heikkinen,26.0,Feminino,True,0,0,3ª,STON/O2. 3101282,Southampton,7.925,
+4,Mrs. Jacques Heath Lily May Peel Futrelle,35.0,Feminino,True,0,1,1ª,113803,Southampton,53.1,C123
+5,Mr. William Henry Allen,35.0,Masculino,False,0,0,3ª,373450,Southampton,8.05,
+6,Mr. James Moran,,Masculino,False,0,0,3ª,330877,Queenstown,8.4583,
+7,Mr. Timothy J McCarthy,54.0,Masculino,False,0,0,1ª,17463,Southampton,51.8625,E46
+8,Master. Gosta Leonard Palsson,2.0,Masculino,False,1,3,3ª,349909,Southampton,21.075,
+9,Mrs. Oscar W Elisabeth Vilhelmina Berg Johnson,27.0,Feminino,True,2,0,3ª,347742,Southampton,11.1333,
+10,Mrs. Nicholas Adele Achem Nasser,14.0,Feminino,True,0,1,2ª,237736,Cherbourg,30.0708,
+11,Miss. Marguerite Rut Sandstrom,4.0,Feminino,True,1,1,3ª,PP 9549,Southampton,16.7,G6
+12,Miss. Elizabeth Bonnell,58.0,Feminino,True,0,0,1ª,113783,Southampton,26.55,C103
+13,Mr. William Henry Saundercock,20.0,Masculino,False,0,0,3ª,A/5. 2151,Southampton,8.05,
+14,Mr. Anders Johan Andersson,39.0,Masculino,False,5,1,3ª,347082,Southampton,31.275,
+15,Miss. Hulda Amanda Adolfina Vestrom,14.0,Feminino,False,0,0,3ª,350406,Southampton,7.8542,
+16,Mrs. Mary D Kingcome  Hewlett,55.0,Feminino,True,0,0,2ª,248706,Southampton,16.0,
+17,Master. Eugene Rice,2.0,Masculino,False,1,4,3ª,382652,Queenstown,29.125,
+18,Mr. Charles Eugene Williams,,Masculino,True,0,0,2ª,244373,Southampton,13.0,
+19,Mrs. Julius Emelia Maria Vandemoortele Vander Planke,31.0,Feminino,False,0,1,3ª,345763,Southampton,18.0,
+20,Mrs. Fatima Masselmani,,Feminino,True,0,0,3ª,2649,Cherbourg,7.225,
+21,Mr. Joseph J Fynney,35.0,Masculino,False,0,0,2ª,239865,Southampton,26.0,
+22,Mr. Lawrence Beesley,34.0,Masculino,True,0,0,2ª,248698,Southampton,13.0,D56
+23,"Miss. Anna ""Annie"" McGowan",15.0,Feminino,True,0,0,3ª,330923,Queenstown,8.0292,
+24,Mr. William Thompson Sloper,28.0,Masculino,True,0,0,1ª,113788,Southampton,35.5,A6
+25,Miss. Torborg Danira Palsson,8.0,Feminino,False,1,3,3ª,349909,Southampton,21.075,
+26,Mrs. Carl Oscar Selma Augusta Emilia Johansson Asplund,38.0,Feminino,True,5,1,3ª,347077,Southampton,31.3875,
+27,Mr. Farred Chehab Emir,,Masculino,False,0,0,3ª,2631,Cherbourg,7.225,
+28,Mr. Charles Alexander Fortune,19.0,Masculino,False,2,3,1ª,19950,Southampton,263.0,C23 C25 C27
+29,"Miss. Ellen ""Nellie"" O'Dwyer",,Feminino,True,0,0,3ª,330959,Queenstown,7.8792,
+30,Mr. Lalio Todoroff,,Masculino,False,0,0,3ª,349216,Southampton,7.8958,
+31,Don. Manuel E Uruchurtu,40.0,Masculino,False,0,0,1ª,PC 17601,Cherbourg,27.7208,
+32,Mrs. William Augustus Marie Eugenie Spencer,,Feminino,True,0,1,1ª,PC 17569,Cherbourg,146.5208,B78
+33,Miss. Mary Agatha Glynn,,Feminino,True,0,0,3ª,335677,Queenstown,7.75,
+34,Mr. Edward H Wheadon,66.0,Masculino,False,0,0,2ª,C.A. 24579,Southampton,10.5,
+35,Mr. Edgar Joseph Meyer,28.0,Masculino,False,0,1,1ª,PC 17604,Cherbourg,82.1708,
+36,Mr. Alexander Oskar Holverson,42.0,Masculino,False,0,1,1ª,113789,Southampton,52.0,
+37,Mr. Hanna Mamee,,Masculino,True,0,0,3ª,2677,Cherbourg,7.2292,
+38,Mr. Ernest Charles Cann,21.0,Masculino,False,0,0,3ª,A./5. 2152,Southampton,8.05,
+39,Miss. Augusta Maria Vander Planke,18.0,Feminino,False,0,2,3ª,345764,Southampton,18.0,
+40,Miss. Jamila Nicola-Yarred,14.0,Feminino,True,0,1,3ª,2651,Cherbourg,11.2417,
+41,Mrs. Johan Johanna Persdotter Larsson Ahlin,40.0,Feminino,False,0,1,3ª,7546,Southampton,9.475,
+42,Mrs. William John Robert Dorothy Ann Wonnacott Turpin,27.0,Feminino,False,0,1,2ª,11668,Southampton,21.0,
+43,Mr. Theodor Kraeff,,Masculino,False,0,0,3ª,349253,Cherbourg,7.8958,
+44,Miss. Simonne Marie Anne Andree Laroche,3.0,Feminino,True,2,1,2ª,SC/Paris 2123,Cherbourg,41.5792,
+45,Miss. Margaret Delia Devaney,19.0,Feminino,True,0,0,3ª,330958,Queenstown,7.8792,
+46,Mr. William John Rogers,,Masculino,False,0,0,3ª,S.C./A.4. 23567,Southampton,8.05,
+47,Mr. Denis Lennon,,Masculino,False,0,1,3ª,370371,Queenstown,15.5,
+48,Miss. Bridget O'Driscoll,,Feminino,True,0,0,3ª,14311,Queenstown,7.75,
+49,Mr. Youssef Samaan,,Masculino,False,0,2,3ª,2662,Cherbourg,21.6792,
+50,Mrs. Josef Josefine Franchi Arnold-Franchi,18.0,Feminino,False,0,1,3ª,349237,Southampton,17.8,
+51,Master. Juha Niilo Panula,7.0,Masculino,False,1,4,3ª,3101295,Southampton,39.6875,
+52,Mr. Richard Cater Nosworthy,21.0,Masculino,False,0,0,3ª,A/4. 39886,Southampton,7.8,
+53,Mrs. Henry Sleeper Myna Haxtun Harper,49.0,Feminino,True,0,1,1ª,PC 17572,Cherbourg,76.7292,D33
+54,Mrs. Lizzie Elizabeth Anne Wilkinson Faunthorpe,29.0,Feminino,True,0,1,2ª,2926,Southampton,26.0,
+55,Mr. Engelhart Cornelius Ostby,65.0,Masculino,False,1,0,1ª,113509,Cherbourg,61.9792,B30
+56,Mr. Hugh Woolner,,Masculino,True,0,0,1ª,19947,Southampton,35.5,C52
+57,Miss. Emily Rugg,21.0,Feminino,True,0,0,2ª,C.A. 31026,Southampton,10.5,
+58,Mr. Mansouer Novel,28.5,Masculino,False,0,0,3ª,2697,Cherbourg,7.2292,
+59,Miss. Constance Mirium West,5.0,Feminino,True,2,1,2ª,C.A. 34651,Southampton,27.75,
+60,Master. William Frederick Goodwin,11.0,Masculino,False,2,5,3ª,CA 2144,Southampton,46.9,
+61,Mr. Orsen Sirayanian,22.0,Masculino,False,0,0,3ª,2669,Cherbourg,7.2292,
+62,Miss. Amelie Icard,38.0,Feminino,True,0,0,1ª,113572,Southampton,80.0,B28
+63,Mr. Henry Birkhardt Harris,45.0,Masculino,False,0,1,1ª,36973,Southampton,83.475,C83
+64,Master. Harald Skoog,4.0,Masculino,False,2,3,3ª,347088,Southampton,27.9,
+65,Mr. Albert A Stewart,,Masculino,False,0,0,1ª,PC 17605,Cherbourg,27.7208,
+66,Master. Gerios Moubarek,,Masculino,True,1,1,3ª,2661,Cherbourg,15.2458,
+67,Mrs. Elizabeth Ramell Nye,29.0,Feminino,True,0,0,2ª,C.A. 29395,Southampton,10.5,F33
+68,Mr. Ernest James Crease,19.0,Masculino,False,0,0,3ª,S.P. 3464,Southampton,8.1583,
+69,Miss. Erna Alexandra Andersson,17.0,Feminino,True,2,4,3ª,3101281,Southampton,7.925,
+70,Mr. Vincenz Kink,26.0,Masculino,False,0,2,3ª,315151,Southampton,8.6625,
+71,Mr. Stephen Curnow Jenkin,32.0,Masculino,False,0,0,2ª,C.A. 33111,Southampton,10.5,
+72,Miss. Lillian Amy Goodwin,16.0,Feminino,False,2,5,3ª,CA 2144,Southampton,46.9,
+73,Mr. Ambrose Jr Hood,21.0,Masculino,False,0,0,2ª,S.O.C. 14879,Southampton,73.5,
+74,Mr. Apostolos Chronopoulos,26.0,Masculino,False,0,1,3ª,2680,Cherbourg,14.4542,
+75,Mr. Lee Bing,32.0,Masculino,True,0,0,3ª,1601,Southampton,56.4958,
+76,Mr. Sigurd Hansen Moen,25.0,Masculino,False,0,0,3ª,348123,Southampton,7.65,F G73
+77,Mr. Ivan Staneff,,Masculino,False,0,0,3ª,349208,Southampton,7.8958,
+78,Mr. Rahamin Haim Moutal,,Masculino,False,0,0,3ª,374746,Southampton,8.05,
+79,Master. Alden Gates Caldwell,0.83,Masculino,True,2,0,2ª,248738,Southampton,29.0,
+80,Miss. Elizabeth Dowdell,30.0,Feminino,True,0,0,3ª,364516,Southampton,12.475,
+81,Mr. Achille Waelens,22.0,Masculino,False,0,0,3ª,345767,Southampton,9.0,
+82,Mr. Jan Baptist Sheerlinck,29.0,Masculino,True,0,0,3ª,345779,Southampton,9.5,
+83,Miss. Brigdet Delia McDermott,,Feminino,True,0,0,3ª,330932,Queenstown,7.7875,
+84,Mr. Francisco M Carrau,28.0,Masculino,False,0,0,1ª,113059,Southampton,47.1,
+85,Miss. Bertha Ilett,17.0,Feminino,True,0,0,2ª,SO/C 14885,Southampton,10.5,
+86,Mrs. Karl Alfred Maria Mathilda Gustafsson Backstrom,33.0,Feminino,True,0,3,3ª,3101278,Southampton,15.85,
+87,Mr. William Neal Ford,16.0,Masculino,False,3,1,3ª,W./C. 6608,Southampton,34.375,
+88,Mr. Selman Francis Slocovski,,Masculino,False,0,0,3ª,SOTON/OQ 392086,Southampton,8.05,
+89,Miss. Mabel Helen Fortune,23.0,Feminino,True,2,3,1ª,19950,Southampton,263.0,C23 C25 C27
+90,Mr. Francesco Celotti,24.0,Masculino,False,0,0,3ª,343275,Southampton,8.05,
+91,Mr. Emil Christmann,29.0,Masculino,False,0,0,3ª,343276,Southampton,8.05,
+92,Mr. Paul Edvin Andreasson,20.0,Masculino,False,0,0,3ª,347466,Southampton,7.8542,
+93,Mr. Herbert Fuller Chaffee,46.0,Masculino,False,0,1,1ª,W.E.P. 5734,Southampton,61.175,E31
+94,Mr. Bertram Frank Dean,26.0,Masculino,False,2,1,3ª,C.A. 2315,Southampton,20.575,
+95,Mr. Daniel Coxon,59.0,Masculino,False,0,0,3ª,364500,Southampton,7.25,
+96,Mr. Charles Joseph Shorney,,Masculino,False,0,0,3ª,374910,Southampton,8.05,
+97,Mr. George B Goldschmidt,71.0,Masculino,False,0,0,1ª,PC 17754,Cherbourg,34.6542,A5
+98,Mr. William Bertram Greenfield,23.0,Masculino,True,1,0,1ª,PC 17759,Cherbourg,63.3583,D10 D12
+99,Mrs. John T Ada Julia Bone Doling,34.0,Feminino,True,1,0,2ª,231919,Southampton,23.0,
+100,Mr. Sinai Kantor,34.0,Masculino,False,0,1,2ª,244367,Southampton,26.0,
+101,Miss. Matilda Petranec,28.0,Feminino,False,0,0,3ª,349245,Southampton,7.8958,
+102,"Mr. Pastcho ""Pentcho"" Petroff",,Masculino,False,0,0,3ª,349215,Southampton,7.8958,
+103,Mr. Richard Frasar White,21.0,Masculino,False,1,0,1ª,35281,Southampton,77.2875,D26
+104,Mr. Gustaf Joel Johansson,33.0,Masculino,False,0,0,3ª,7540,Southampton,8.6542,
+105,Mr. Anders Vilhelm Gustafsson,37.0,Masculino,False,0,2,3ª,3101276,Southampton,7.925,
+106,Mr. Stoytcho Mionoff,28.0,Masculino,False,0,0,3ª,349207,Southampton,7.8958,
+107,Miss. Anna Kristine Salkjelsvik,21.0,Feminino,True,0,0,3ª,343120,Southampton,7.65,
+108,Mr. Albert Johan Moss,,Masculino,True,0,0,3ª,312991,Southampton,7.775,
+109,Mr. Tido Rekic,38.0,Masculino,False,0,0,3ª,349249,Southampton,7.8958,
+110,Miss. Bertha Moran,,Feminino,True,0,1,3ª,371110,Queenstown,24.15,
+111,Mr. Walter Chamberlain Porter,47.0,Masculino,False,0,0,1ª,110465,Southampton,52.0,C110
+112,Miss. Hileni Zabour,14.5,Feminino,False,0,1,3ª,2665,Cherbourg,14.4542,
+113,Mr. David John Barton,22.0,Masculino,False,0,0,3ª,324669,Southampton,8.05,
+114,Miss. Katriina Jussila,20.0,Feminino,False,0,1,3ª,4136,Southampton,9.825,
+115,Miss. Malake Attalah,17.0,Feminino,False,0,0,3ª,2627,Cherbourg,14.4583,
+116,Mr. Edvard Pekoniemi,21.0,Masculino,False,0,0,3ª,STON/O 2. 3101294,Southampton,7.925,
+117,Mr. Patrick Connors,70.5,Masculino,False,0,0,3ª,370369,Queenstown,7.75,
+118,Mr. William John Robert Turpin,29.0,Masculino,False,0,1,2ª,11668,Southampton,21.0,
+119,Mr. Quigg Edmond Baxter,24.0,Masculino,False,1,0,1ª,PC 17558,Cherbourg,247.5208,B58 B60
+120,Miss. Ellis Anna Maria Andersson,2.0,Feminino,False,2,4,3ª,347082,Southampton,31.275,
+121,Mr. Stanley George Hickman,21.0,Masculino,False,0,2,2ª,S.O.C. 14879,Southampton,73.5,
+122,Mr. Leonard Charles Moore,,Masculino,False,0,0,3ª,A4. 54510,Southampton,8.05,
+123,Mr. Nicholas Nasser,32.5,Masculino,False,0,1,2ª,237736,Cherbourg,30.0708,
+124,Miss. Susan Webber,32.5,Feminino,True,0,0,2ª,27267,Southampton,13.0,E101
+125,Mr. Percival Wayland White,54.0,Masculino,False,1,0,1ª,35281,Southampton,77.2875,D26
+126,Master. Elias Nicola-Yarred,12.0,Masculino,True,0,1,3ª,2651,Cherbourg,11.2417,
+127,Mr. Martin McMahon,,Masculino,False,0,0,3ª,370372,Queenstown,7.75,
+128,Mr. Fridtjof Arne Madsen,24.0,Masculino,True,0,0,3ª,C 17369,Southampton,7.1417,
+129,Miss. Anna Peter,,Feminino,True,1,1,3ª,2668,Cherbourg,22.3583,F E69
+130,Mr. Johan Ekstrom,45.0,Masculino,False,0,0,3ª,347061,Southampton,6.975,
+131,Mr. Jozef Drazenoic,33.0,Masculino,False,0,0,3ª,349241,Cherbourg,7.8958,
+132,Mr. Domingos Fernandeo Coelho,20.0,Masculino,False,0,0,3ª,SOTON/O.Q. 3101307,Southampton,7.05,
+133,Mrs. Alexander A Grace Charity Laury Robins,47.0,Feminino,False,0,1,3ª,A/5. 3337,Southampton,14.5,
+134,Mrs. Leopold Mathilde Francoise Pede Weisz,29.0,Feminino,True,0,1,2ª,228414,Southampton,26.0,
+135,Mr. Samuel James Hayden Sobey,25.0,Masculino,False,0,0,2ª,C.A. 29178,Southampton,13.0,
+136,Mr. Emile Richard,23.0,Masculino,False,0,0,2ª,SC/PARIS 2133,Cherbourg,15.0458,
+137,Miss. Helen Monypeny Newsom,19.0,Feminino,True,2,0,1ª,11752,Southampton,26.2833,D47
+138,Mr. Jacques Heath Futrelle,37.0,Masculino,False,0,1,1ª,113803,Southampton,53.1,C123
+139,Mr. Olaf Elon Osen,16.0,Masculino,False,0,0,3ª,7534,Southampton,9.2167,
+140,Mr. Victor Giglio,24.0,Masculino,False,0,0,1ª,PC 17593,Cherbourg,79.2,B86
+141,Mrs. Joseph Sultana Boulos,,Feminino,False,2,0,3ª,2678,Cherbourg,15.2458,
+142,Miss. Anna Sofia Nysten,22.0,Feminino,True,0,0,3ª,347081,Southampton,7.75,
+143,Mrs. Pekka Pietari Elin Matilda Dolck Hakkarainen,24.0,Feminino,True,0,1,3ª,STON/O2. 3101279,Southampton,15.85,
+144,Mr. Jeremiah Burke,19.0,Masculino,False,0,0,3ª,365222,Queenstown,6.75,
+145,Mr. Edgardo Samuel Andrew,18.0,Masculino,False,0,0,2ª,231945,Southampton,11.5,
+146,Mr. Joseph Charles Nicholls,19.0,Masculino,False,1,1,2ª,C.A. 33112,Southampton,36.75,
+147,"Mr. August Edvard ""Wennerstrom"" Andersson",27.0,Masculino,True,0,0,3ª,350043,Southampton,7.7958,
+148,"Miss. Robina Maggie ""Ruby"" Ford",9.0,Feminino,False,2,2,3ª,W./C. 6608,Southampton,34.375,
+149,"Mr. Michel ""Louis M Hoffman"" Navratil",36.5,Masculino,False,2,0,2ª,230080,Southampton,26.0,F2
+150,Rev. Thomas Roussel Davids Byles,42.0,Masculino,False,0,0,2ª,244310,Southampton,13.0,
+151,Rev. Robert James Bateman,51.0,Masculino,False,0,0,2ª,S.O.P. 1166,Southampton,12.525,
+152,Mrs. Thomas Edith Wearne Pears,22.0,Feminino,True,0,1,1ª,113776,Southampton,66.6,C2
+153,Mr. Alfonzo Meo,55.5,Masculino,False,0,0,3ª,A.5. 11206,Southampton,8.05,
+154,Mr. Austin Blyler van Billiard,40.5,Masculino,False,2,0,3ª,A/5. 851,Southampton,14.5,
+155,Mr. Ole Martin Olsen,,Masculino,False,0,0,3ª,Fa 265302,Southampton,7.3125,
+156,Mr. Charles Duane Williams,51.0,Masculino,False,1,0,1ª,PC 17597,Cherbourg,61.3792,
+157,"Miss. Katherine ""Katie"" Gilnagh",16.0,Feminino,True,0,0,3ª,35851,Queenstown,7.7333,
+158,Mr. Harry Corn,30.0,Masculino,False,0,0,3ª,SOTON/OQ 392090,Southampton,8.05,
+159,Mr. Mile Smiljanic,,Masculino,False,0,0,3ª,315037,Southampton,8.6625,
+160,Master. Thomas Henry Sage,,Masculino,False,2,8,3ª,CA. 2343,Southampton,69.55,
+161,Mr. John Hatfield Cribb,44.0,Masculino,False,1,0,3ª,371362,Southampton,16.1,
+162,"Mrs. James Elizabeth ""Bessie"" Inglis Milne Watt",40.0,Feminino,True,0,0,2ª,C.A. 33595,Southampton,15.75,
+163,Mr. John Viktor Bengtsson,26.0,Masculino,False,0,0,3ª,347068,Southampton,7.775,
+164,Mr. Jovo Calic,17.0,Masculino,False,0,0,3ª,315093,Southampton,8.6625,
+165,Master. Eino Viljami Panula,1.0,Masculino,False,1,4,3ª,3101295,Southampton,39.6875,
+166,"Master. Frank John William ""Frankie"" Goldsmith",9.0,Masculino,True,2,0,3ª,363291,Southampton,20.525,
+167,Mrs. Edith Martha Bowerman Chibnall,,Feminino,True,1,0,1ª,113505,Southampton,55.0,E33
+168,Mrs. William Anna Bernhardina Karlsson Skoog,45.0,Feminino,False,4,1,3ª,347088,Southampton,27.9,
+169,Mr. John D Baumann,,Masculino,False,0,0,1ª,PC 17318,Southampton,25.925,
+170,Mr. Lee Ling,28.0,Masculino,False,0,0,3ª,1601,Southampton,56.4958,
+171,Mr. Wyckoff Van der hoef,61.0,Masculino,False,0,0,1ª,111240,Southampton,33.5,B19
+172,Master. Arthur Rice,4.0,Masculino,False,1,4,3ª,382652,Queenstown,29.125,
+173,Miss. Eleanor Ileen Johnson,1.0,Feminino,True,1,1,3ª,347742,Southampton,11.1333,
+174,Mr. Antti Wilhelm Sivola,21.0,Masculino,False,0,0,3ª,STON/O 2. 3101280,Southampton,7.925,
+175,Mr. James Clinch Smith,56.0,Masculino,False,0,0,1ª,17764,Cherbourg,30.6958,A7
+176,Mr. Klas Albin Klasen,18.0,Masculino,False,1,1,3ª,350404,Southampton,7.8542,
+177,Master. Henry Forbes Lefebre,,Masculino,False,1,3,3ª,4133,Southampton,25.4667,
+178,Miss. Ann Elizabeth Isham,50.0,Feminino,False,0,0,1ª,PC 17595,Cherbourg,28.7125,C49
+179,Mr. Reginald Hale,30.0,Masculino,False,0,0,2ª,250653,Southampton,13.0,
+180,Mr. Lionel Leonard,36.0,Masculino,False,0,0,3ª,LINE,Southampton,0.0,
+181,Miss. Constance Gladys Sage,,Feminino,False,2,8,3ª,CA. 2343,Southampton,69.55,
+182,Mr. Rene Pernot,,Masculino,False,0,0,2ª,SC/PARIS 2131,Cherbourg,15.05,
+183,Master. Clarence Gustaf Hugo Asplund,9.0,Masculino,False,2,4,3ª,347077,Southampton,31.3875,
+184,Master. Richard F Becker,1.0,Masculino,True,1,2,2ª,230136,Southampton,39.0,F4
+185,Miss. Luise Gretchen Kink-Heilmann,4.0,Feminino,True,2,0,3ª,315153,Southampton,22.025,
+186,Mr. Hugh Roscoe Rood,,Masculino,False,0,0,1ª,113767,Southampton,50.0,A32
+187,"Mrs. Thomas Johanna ""Hannah"" Godfrey O'Brien",,Feminino,True,0,1,3ª,370365,Queenstown,15.5,
+188,"Mr. Charles Hallace ""Mr C Rolmane"" Romaine",45.0,Masculino,True,0,0,1ª,111428,Southampton,26.55,
+189,Mr. John Bourke,40.0,Masculino,False,1,1,3ª,364849,Queenstown,15.5,
+190,Mr. Stjepan Turcin,36.0,Masculino,False,0,0,3ª,349247,Southampton,7.8958,
+191,Mrs. Rosa Pinsky,32.0,Feminino,True,0,0,2ª,234604,Southampton,13.0,
+192,Mr. William Carbines,19.0,Masculino,False,0,0,2ª,28424,Southampton,13.0,
+193,Miss. Carla Christine Nielsine Andersen-Jensen,19.0,Feminino,True,0,1,3ª,350046,Southampton,7.8542,
+194,Master. Michel M Navratil,3.0,Masculino,True,1,1,2ª,230080,Southampton,26.0,F2
+195,Mrs. James Joseph Margaret Tobin Brown,44.0,Feminino,True,0,0,1ª,PC 17610,Cherbourg,27.7208,B4
+196,Miss. Elise Lurette,58.0,Feminino,True,0,0,1ª,PC 17569,Cherbourg,146.5208,B80
+197,Mr. Robert Mernagh,,Masculino,False,0,0,3ª,368703,Queenstown,7.75,
+198,Mr. Karl Siegwart Andreas Olsen,42.0,Masculino,False,1,0,3ª,4579,Southampton,8.4042,
+199,"Miss. Margaret ""Maggie"" Madigan",,Feminino,True,0,0,3ª,370370,Queenstown,7.75,
+200,"Miss. Henriette ""Mrs Harbeck"" Yrois",24.0,Feminino,False,0,0,2ª,248747,Southampton,13.0,
+201,Mr. Nestor Cyriel Vande Walle,28.0,Masculino,False,0,0,3ª,345770,Southampton,9.5,
+202,Mr. Frederick Sage,,Masculino,False,2,8,3ª,CA. 2343,Southampton,69.55,
+203,Mr. Jakob Alfred Johanson,34.0,Masculino,False,0,0,3ª,3101264,Southampton,6.4958,
+204,Mr. Gerious Youseff,45.5,Masculino,False,0,0,3ª,2628,Cherbourg,7.225,
+205,"Mr. Gurshon ""Gus"" Cohen",18.0,Masculino,True,0,0,3ª,A/5 3540,Southampton,8.05,
+206,Miss. Telma Matilda Strom,2.0,Feminino,False,1,0,3ª,347054,Southampton,10.4625,G6
+207,Mr. Karl Alfred Backstrom,32.0,Masculino,False,0,1,3ª,3101278,Southampton,15.85,
+208,Mr. Nassef Cassem Albimona,26.0,Masculino,True,0,0,3ª,2699,Cherbourg,18.7875,
+209,"Miss. Helen ""Ellen"" Carr",16.0,Feminino,True,0,0,3ª,367231,Queenstown,7.75,
+210,Mr. Henry Blank,40.0,Masculino,True,0,0,1ª,112277,Cherbourg,31.0,A31
+211,Mr. Ahmed Ali,24.0,Masculino,False,0,0,3ª,SOTON/O.Q. 3101311,Southampton,7.05,
+212,Miss. Clear Annie Cameron,35.0,Feminino,True,0,0,2ª,F.C.C. 13528,Southampton,21.0,
+213,Mr. John Henry Perkin,22.0,Masculino,False,0,0,3ª,A/5 21174,Southampton,7.25,
+214,Mr. Hans Kristensen Givard,30.0,Masculino,False,0,0,2ª,250646,Southampton,13.0,
+215,Mr. Philip Kiernan,,Masculino,False,0,1,3ª,367229,Queenstown,7.75,
+216,Miss. Madeleine Newell,31.0,Feminino,True,0,1,1ª,35273,Cherbourg,113.275,D36
+217,Miss. Eliina Honkanen,27.0,Feminino,True,0,0,3ª,STON/O2. 3101283,Southampton,7.925,
+218,Mr. Sidney Samuel Jacobsohn,42.0,Masculino,False,0,1,2ª,243847,Southampton,27.0,
+219,Miss. Albina Bazzani,32.0,Feminino,True,0,0,1ª,11813,Cherbourg,76.2917,D15
+220,Mr. Walter Harris,30.0,Masculino,False,0,0,2ª,W/C 14208,Southampton,10.5,
+221,Mr. Victor Francis Sunderland,16.0,Masculino,True,0,0,3ª,SOTON/OQ 392089,Southampton,8.05,
+222,Mr. James H Bracken,27.0,Masculino,False,0,0,2ª,220367,Southampton,13.0,
+223,Mr. George Henry Green,51.0,Masculino,False,0,0,3ª,21440,Southampton,8.05,
+224,Mr. Christo Nenkoff,,Masculino,False,0,0,3ª,349234,Southampton,7.8958,
+225,Mr. Frederick Maxfield Hoyt,38.0,Masculino,True,0,1,1ª,19943,Southampton,90.0,C93
+226,Mr. Karl Ivar Sven Berglund,22.0,Masculino,False,0,0,3ª,PP 4348,Southampton,9.35,
+227,Mr. William John Mellors,19.0,Masculino,True,0,0,2ª,SW/PP 751,Southampton,10.5,
+228,"Mr. John Hall ""Henry"" Lovell",20.5,Masculino,False,0,0,3ª,A/5 21173,Southampton,7.25,
+229,Mr. Arne Jonas Fahlstrom,18.0,Masculino,False,0,0,2ª,236171,Southampton,13.0,
+230,Miss. Mathilde Lefebre,,Feminino,False,1,3,3ª,4133,Southampton,25.4667,
+231,Mrs. Henry Birkhardt Irene Wallach Harris,35.0,Feminino,True,0,1,1ª,36973,Southampton,83.475,C83
+232,Mr. Bengt Edvin Larsson,29.0,Masculino,False,0,0,3ª,347067,Southampton,7.775,
+233,Mr. Ernst Adolf Sjostedt,59.0,Masculino,False,0,0,2ª,237442,Southampton,13.5,
+234,Miss. Lillian Gertrud Asplund,5.0,Feminino,True,2,4,3ª,347077,Southampton,31.3875,
+235,Mr. Robert William Norman Leyson,24.0,Masculino,False,0,0,2ª,C.A. 29566,Southampton,10.5,
+236,Miss. Alice Phoebe Harknett,,Feminino,False,0,0,3ª,W./C. 6609,Southampton,7.55,
+237,Mr. Stephen Hold,44.0,Masculino,False,0,1,2ª,26707,Southampton,26.0,
+238,"Miss. Marjorie ""Lottie"" Collyer",8.0,Feminino,True,2,0,2ª,C.A. 31921,Southampton,26.25,
+239,Mr. Frederick William Pengelly,19.0,Masculino,False,0,0,2ª,28665,Southampton,10.5,
+240,Mr. George Henry Hunt,33.0,Masculino,False,0,0,2ª,SCO/W 1585,Southampton,12.275,
+241,Miss. Thamine Zabour,,Feminino,False,0,1,3ª,2665,Cherbourg,14.4542,
+242,"Miss. Katherine ""Kate"" Murphy",,Feminino,True,0,1,3ª,367230,Queenstown,15.5,
+243,Mr. Reginald Charles Coleridge,29.0,Masculino,False,0,0,2ª,W./C. 14263,Southampton,10.5,
+244,Mr. Matti Alexanteri Maenpaa,22.0,Masculino,False,0,0,3ª,STON/O 2. 3101275,Southampton,7.125,
+245,Mr. Sleiman Attalah,30.0,Masculino,False,0,0,3ª,2694,Cherbourg,7.225,
+246,Dr. William Edward Minahan,44.0,Masculino,False,0,2,1ª,19928,Queenstown,90.0,C78
+247,Miss. Agda Thorilda Viktoria Lindahl,25.0,Feminino,False,0,0,3ª,347071,Southampton,7.775,
+248,Mrs. William Anna Hamalainen,24.0,Feminino,True,2,0,2ª,250649,Southampton,14.5,
+249,Mr. Richard Leonard Beckwith,37.0,Masculino,True,1,1,1ª,11751,Southampton,52.5542,D35
+250,Rev. Ernest Courtenay Carter,54.0,Masculino,False,0,1,2ª,244252,Southampton,26.0,
+251,Mr. James George Reed,,Masculino,False,0,0,3ª,362316,Southampton,7.25,
+252,Mrs. Wilhelm Elna Matilda Persson Strom,29.0,Feminino,False,1,1,3ª,347054,Southampton,10.4625,G6
+253,Mr. William Thomas Stead,62.0,Masculino,False,0,0,1ª,113514,Southampton,26.55,C87
+254,Mr. William Arthur Lobb,30.0,Masculino,False,0,1,3ª,A/5. 3336,Southampton,16.1,
+255,Mrs. Viktor Helena Wilhelmina Rosblom,41.0,Feminino,False,2,0,3ª,370129,Southampton,20.2125,
+256,Mrs. Darwis Hanne Youssef Razi Touma,29.0,Feminino,True,2,0,3ª,2650,Cherbourg,15.2458,
+257,Mrs. Gertrude Maybelle Thorne,,Feminino,True,0,0,1ª,PC 17585,Cherbourg,79.2,
+258,Miss. Gladys Cherry,30.0,Feminino,True,0,0,1ª,110152,Southampton,86.5,B77
+259,Miss. Anna Ward,35.0,Feminino,True,0,0,1ª,PC 17755,Cherbourg,512.3292,
+260,Mrs. Lutie Davis Parrish,50.0,Feminino,True,1,0,2ª,230433,Southampton,26.0,
+261,Mr. Thomas Smith,,Masculino,False,0,0,3ª,384461,Queenstown,7.75,
+262,Master. Edvin Rojj Felix Asplund,3.0,Masculino,True,2,4,3ª,347077,Southampton,31.3875,
+263,Mr. Emil Taussig,52.0,Masculino,False,1,1,1ª,110413,Southampton,79.65,E67
+264,Mr. William Harrison,40.0,Masculino,False,0,0,1ª,112059,Southampton,0.0,B94
+265,Miss. Delia Henry,,Feminino,False,0,0,3ª,382649,Queenstown,7.75,
+266,Mr. David Reeves,36.0,Masculino,False,0,0,2ª,C.A. 17248,Southampton,10.5,
+267,Mr. Ernesti Arvid Panula,16.0,Masculino,False,1,4,3ª,3101295,Southampton,39.6875,
+268,Mr. Ernst Ulrik Persson,25.0,Masculino,True,0,1,3ª,347083,Southampton,7.775,
+269,Mrs. William Thompson Edith Junkins Graham,58.0,Feminino,True,1,0,1ª,PC 17582,Southampton,153.4625,C125
+270,Miss. Amelia Bissette,35.0,Feminino,True,0,0,1ª,PC 17760,Southampton,135.6333,C99
+271,Mr. Alexander Cairns,,Masculino,False,0,0,1ª,113798,Southampton,31.0,
+272,Mr. William Henry Tornquist,25.0,Masculino,True,0,0,3ª,LINE,Southampton,0.0,
+273,Mrs. Elizabeth Anne Maidment Mellinger,41.0,Feminino,True,1,0,2ª,250644,Southampton,19.5,
+274,Mr. Charles H Natsch,37.0,Masculino,False,1,0,1ª,PC 17596,Cherbourg,29.7,C118
+275,"Miss. Hanora ""Nora"" Healy",,Feminino,True,0,0,3ª,370375,Queenstown,7.75,
+276,Miss. Kornelia Theodosia Andrews,63.0,Feminino,True,0,1,1ª,13502,Southampton,77.9583,D7
+277,Miss. Augusta Charlotta Lindblom,45.0,Feminino,False,0,0,3ª,347073,Southampton,7.75,
+278,"Mr. Francis ""Frank"" Parkes",,Masculino,False,0,0,2ª,239853,Southampton,0.0,
+279,Master. Eric Rice,7.0,Masculino,False,1,4,3ª,382652,Queenstown,29.125,
+280,Mrs. Stanton Rosa Hunt Abbott,35.0,Feminino,True,1,1,3ª,C.A. 2673,Southampton,20.25,
+281,Mr. Frank Duane,65.0,Masculino,False,0,0,3ª,336439,Queenstown,7.75,
+282,Mr. Nils Johan Goransson Olsson,28.0,Masculino,False,0,0,3ª,347464,Southampton,7.8542,
+283,Mr. Alfons de Pelsmaeker,16.0,Masculino,False,0,0,3ª,345778,Southampton,9.5,
+284,Mr. Edward Arthur Dorking,19.0,Masculino,True,0,0,3ª,A/5. 10482,Southampton,8.05,
+285,Mr. Richard William Smith,,Masculino,False,0,0,1ª,113056,Southampton,26.0,A19
+286,Mr. Ivan Stankovic,33.0,Masculino,False,0,0,3ª,349239,Cherbourg,8.6625,
+287,Mr. Theodore de Mulder,30.0,Masculino,True,0,0,3ª,345774,Southampton,9.5,
+288,Mr. Penko Naidenoff,22.0,Masculino,False,0,0,3ª,349206,Southampton,7.8958,
+289,Mr. Masabumi Hosono,42.0,Masculino,True,0,0,2ª,237798,Southampton,13.0,
+290,Miss. Kate Connolly,22.0,Feminino,True,0,0,3ª,370373,Queenstown,7.75,
+291,"Miss. Ellen ""Nellie"" Barber",26.0,Feminino,True,0,0,1ª,19877,Southampton,78.85,
+292,Mrs. Dickinson H Helen Walton Bishop,19.0,Feminino,True,0,1,1ª,11967,Cherbourg,91.0792,B49
+293,Mr. Rene Jacques Levy,36.0,Masculino,False,0,0,2ª,SC/Paris 2163,Cherbourg,12.875,D
+294,Miss. Aloisia Haas,24.0,Feminino,False,0,0,3ª,349236,Southampton,8.85,
+295,Mr. Ivan Mineff,24.0,Masculino,False,0,0,3ª,349233,Southampton,7.8958,
+296,Mr. Ervin G Lewy,,Masculino,False,0,0,1ª,PC 17612,Cherbourg,27.7208,
+297,Mr. Mansour Hanna,23.5,Masculino,False,0,0,3ª,2693,Cherbourg,7.2292,
+298,Miss. Helen Loraine Allison,2.0,Feminino,False,2,1,1ª,113781,Southampton,151.55,C22 C26
+299,Mr. Adolphe Saalfeld,,Masculino,True,0,0,1ª,19988,Southampton,30.5,C106
+300,Mrs. James Helene DeLaudeniere Chaput Baxter,50.0,Feminino,True,1,0,1ª,PC 17558,Cherbourg,247.5208,B58 B60
+301,"Miss. Anna Katherine ""Annie Kate"" Kelly",,Feminino,True,0,0,3ª,9234,Queenstown,7.75,
+302,Mr. Bernard McCoy,,Masculino,True,0,2,3ª,367226,Queenstown,23.25,
+303,Mr. William Cahoone Jr Johnson,19.0,Masculino,False,0,0,3ª,LINE,Southampton,0.0,
+304,Miss. Nora A Keane,,Feminino,True,0,0,2ª,226593,Queenstown,12.35,E101
+305,"Mr. Howard Hugh ""Harry"" Williams",,Masculino,False,0,0,3ª,A/5 2466,Southampton,8.05,
+306,Master. Hudson Trevor Allison,0.92,Masculino,True,2,1,1ª,113781,Southampton,151.55,C22 C26
+307,Miss. Margaret Fleming,,Feminino,True,0,0,1ª,17421,Cherbourg,110.8833,
+308,Mrs. Victor de Satode Maria Josefa Perez de Soto y Vallejo Penasco y Castellana,17.0,Feminino,True,0,1,1ª,PC 17758,Cherbourg,108.9,C65
+309,Mr. Samuel Abelson,30.0,Masculino,False,0,1,2ª,P/PP 3381,Cherbourg,24.0,
+310,Miss. Laura Mabel Francatelli,30.0,Feminino,True,0,0,1ª,PC 17485,Cherbourg,56.9292,E36
+311,Miss. Margaret Bechstein Hays,24.0,Feminino,True,0,0,1ª,11767,Cherbourg,83.1583,C54
+312,Miss. Emily Borie Ryerson,18.0,Feminino,True,2,2,1ª,PC 17608,Cherbourg,262.375,B57 B59 B63 B66
+313,Mrs. William Anna Sylfven Lahtinen,26.0,Feminino,False,1,1,2ª,250651,Southampton,26.0,
+314,Mr. Ignjac Hendekovic,28.0,Masculino,False,0,0,3ª,349243,Southampton,7.8958,
+315,Mr. Benjamin Hart,43.0,Masculino,False,1,1,2ª,F.C.C. 13529,Southampton,26.25,
+316,Miss. Helmina Josefina Nilsson,26.0,Feminino,True,0,0,3ª,347470,Southampton,7.8542,
+317,Mrs. Sinai Miriam Sternin Kantor,24.0,Feminino,True,0,1,2ª,244367,Southampton,26.0,
+318,Dr. Ernest Moraweck,54.0,Masculino,False,0,0,2ª,29011,Southampton,14.0,
+319,Miss. Mary Natalie Wick,31.0,Feminino,True,2,0,1ª,36928,Southampton,164.8667,C7
+320,Mrs. Frederic Oakley Margaretta Corning Stone Spedden,40.0,Feminino,True,1,1,1ª,16966,Cherbourg,134.5,E34
+321,Mr. Samuel Dennis,22.0,Masculino,False,0,0,3ª,A/5 21172,Southampton,7.25,
+322,Mr. Yoto Danoff,27.0,Masculino,False,0,0,3ª,349219,Southampton,7.8958,
+323,Miss. Hilda Mary Slayter,30.0,Feminino,True,0,0,2ª,234818,Queenstown,12.35,
+324,Mrs. Albert Francis Sylvia Mae Harbaugh Caldwell,22.0,Feminino,True,1,1,2ª,248738,Southampton,29.0,
+325,Mr. George John Jr Sage,,Masculino,False,2,8,3ª,CA. 2343,Southampton,69.55,
+326,Miss. Marie Grice Young,36.0,Feminino,True,0,0,1ª,PC 17760,Cherbourg,135.6333,C32
+327,Mr. Johan Hansen Nysveen,61.0,Masculino,False,0,0,3ª,345364,Southampton,6.2375,
+328,Mrs. Ada E Hall Ball,36.0,Feminino,True,0,0,2ª,28551,Southampton,13.0,D
+329,Mrs. Frank John Emily Alice Brown Goldsmith,31.0,Feminino,True,1,1,3ª,363291,Southampton,20.525,
+330,Miss. Jean Gertrude Hippach,16.0,Feminino,True,1,0,1ª,111361,Cherbourg,57.9792,B18
+331,Miss. Agnes McCoy,,Feminino,True,0,2,3ª,367226,Queenstown,23.25,
+332,Mr. Austen Partner,45.5,Masculino,False,0,0,1ª,113043,Southampton,28.5,C124
+333,Mr. George Edward Graham,38.0,Masculino,False,1,0,1ª,PC 17582,Southampton,153.4625,C91
+334,Mr. Leo Edmondus Vander Planke,16.0,Masculino,False,0,2,3ª,345764,Southampton,18.0,
+335,Mrs. Henry William Clara Heinsheimer Frauenthal,,Feminino,True,0,1,1ª,PC 17611,Southampton,133.65,
+336,Mr. Mitto Denkoff,,Masculino,False,0,0,3ª,349225,Southampton,7.8958,
+337,Mr. Thomas Clinton Pears,29.0,Masculino,False,0,1,1ª,113776,Southampton,66.6,C2
+338,Miss. Elizabeth Margaret Burns,41.0,Feminino,True,0,0,1ª,16966,Cherbourg,134.5,E40
+339,Mr. Karl Edwart Dahl,45.0,Masculino,True,0,0,3ª,7598,Southampton,8.05,
+340,Mr. Stephen Weart Blackwell,45.0,Masculino,False,0,0,1ª,113784,Southampton,35.5,T
+341,Master. Edmond Roger Navratil,2.0,Masculino,True,1,1,2ª,230080,Southampton,26.0,F2
+342,Miss. Alice Elizabeth Fortune,24.0,Feminino,True,2,3,1ª,19950,Southampton,263.0,C23 C25 C27
+343,Mr. Erik Gustaf Collander,28.0,Masculino,False,0,0,2ª,248740,Southampton,13.0,
+344,Mr. Charles Frederick Waddington Sedgwick,25.0,Masculino,False,0,0,2ª,244361,Southampton,13.0,
+345,Mr. Stanley Hubert Fox,36.0,Masculino,False,0,0,2ª,229236,Southampton,13.0,
+346,"Miss. Amelia ""Mildred"" Brown",24.0,Feminino,True,0,0,2ª,248733,Southampton,13.0,F33
+347,Miss. Marion Elsie Smith,40.0,Feminino,True,0,0,2ª,31418,Southampton,13.0,
+348,Mrs. Thomas Henry Mary E Finck Davison,,Feminino,True,0,1,3ª,386525,Southampton,16.1,
+349,"Master. William Loch ""William"" Coutts",3.0,Masculino,True,1,1,3ª,C.A. 37671,Southampton,15.9,
+350,Mr. Jovan Dimic,42.0,Masculino,False,0,0,3ª,315088,Southampton,8.6625,
+351,Mr. Nils Martin Odahl,23.0,Masculino,False,0,0,3ª,7267,Southampton,9.225,
+352,Mr. Fletcher Fellows Williams-Lambert,,Masculino,False,0,0,1ª,113510,Southampton,35.0,C128
+353,Mr. Tannous Elias,15.0,Masculino,False,1,1,3ª,2695,Cherbourg,7.2292,
+354,Mr. Josef Arnold-Franchi,25.0,Masculino,False,0,1,3ª,349237,Southampton,17.8,
+355,Mr. Wazli Yousif,,Masculino,False,0,0,3ª,2647,Cherbourg,7.225,
+356,Mr. Leo Peter Vanden Steen,28.0,Masculino,False,0,0,3ª,345783,Southampton,9.5,
+357,Miss. Elsie Edith Bowerman,22.0,Feminino,True,1,0,1ª,113505,Southampton,55.0,E33
+358,Miss. Annie Clemmer Funk,38.0,Feminino,False,0,0,2ª,237671,Southampton,13.0,
+359,Miss. Mary McGovern,,Feminino,True,0,0,3ª,330931,Queenstown,7.8792,
+360,"Miss. Helen Mary ""Ellie"" Mockler",,Feminino,True,0,0,3ª,330980,Queenstown,7.8792,
+361,Mr. Wilhelm Skoog,40.0,Masculino,False,4,1,3ª,347088,Southampton,27.9,
+362,Mr. Sebastiano del Carlo,29.0,Masculino,False,0,1,2ª,SC/PARIS 2167,Cherbourg,27.7208,
+363,Mrs. Catherine David Barbara,45.0,Feminino,False,1,0,3ª,2691,Cherbourg,14.4542,
+364,Mr. Adola Asim,35.0,Masculino,False,0,0,3ª,SOTON/O.Q. 3101310,Southampton,7.05,
+365,Mr. Thomas O'Brien,,Masculino,False,0,1,3ª,370365,Queenstown,15.5,
+366,Mr. Mauritz Nils Martin Adahl,30.0,Masculino,False,0,0,3ª,C 7076,Southampton,7.25,
+367,Mrs. Frank Manley Anna Sophia Atkinson Warren,60.0,Feminino,True,0,1,1ª,110813,Cherbourg,75.25,D37
+368,Mrs. Mantoura Boulos Moussa,,Feminino,True,0,0,3ª,2626,Cherbourg,7.2292,
+369,Miss. Annie Jermyn,,Feminino,True,0,0,3ª,14313,Queenstown,7.75,
+370,Mme. Leontine Pauline Aubart,24.0,Feminino,True,0,0,1ª,PC 17477,Cherbourg,69.3,B35
+371,Mr. George Achilles Harder,25.0,Masculino,True,0,1,1ª,11765,Cherbourg,55.4417,E50
+372,Mr. Jakob Alfred Wiklund,18.0,Masculino,False,0,1,3ª,3101267,Southampton,6.4958,
+373,Mr. William Thomas Beavan,19.0,Masculino,False,0,0,3ª,323951,Southampton,8.05,
+374,Mr. Sante Ringhini,22.0,Masculino,False,0,0,1ª,PC 17760,Cherbourg,135.6333,
+375,Miss. Stina Viola Palsson,3.0,Feminino,False,1,3,3ª,349909,Southampton,21.075,
+376,Mrs. Edgar Joseph Leila Saks Meyer,,Feminino,True,0,1,1ª,PC 17604,Cherbourg,82.1708,
+377,Miss. Aurora Adelia Landergren,22.0,Feminino,True,0,0,3ª,C 7077,Southampton,7.25,
+378,Mr. Harry Elkins Widener,27.0,Masculino,False,2,0,1ª,113503,Cherbourg,211.5,C82
+379,Mr. Tannous Betros,20.0,Masculino,False,0,0,3ª,2648,Cherbourg,4.0125,
+380,Mr. Karl Gideon Gustafsson,19.0,Masculino,False,0,0,3ª,347069,Southampton,7.775,
+381,Miss. Rosalie Bidois,42.0,Feminino,True,0,0,1ª,PC 17757,Cherbourg,227.525,
+382,"Miss. Maria ""Mary"" Nakid",1.0,Feminino,True,2,0,3ª,2653,Cherbourg,15.7417,
+383,Mr. Juho Tikkanen,32.0,Masculino,False,0,0,3ª,STON/O 2. 3101293,Southampton,7.925,
+384,Mrs. Alexander Oskar Mary Aline Towner Holverson,35.0,Feminino,True,0,1,1ª,113789,Southampton,52.0,
+385,Mr. Vasil Plotcharsky,,Masculino,False,0,0,3ª,349227,Southampton,7.8958,
+386,Mr. Charles Henry Davies,18.0,Masculino,False,0,0,2ª,S.O.C. 14879,Southampton,73.5,
+387,Master. Sidney Leonard Goodwin,1.0,Masculino,False,2,5,3ª,CA 2144,Southampton,46.9,
+388,Miss. Kate Buss,36.0,Feminino,True,0,0,2ª,27849,Southampton,13.0,
+389,Mr. Matthew Sadlier,,Masculino,False,0,0,3ª,367655,Queenstown,7.7292,
+390,Miss. Bertha Lehmann,17.0,Feminino,True,0,0,2ª,SC 1748,Cherbourg,12.0,
+391,Mr. William Ernest Carter,36.0,Masculino,True,2,1,1ª,113760,Southampton,120.0,B96 B98
+392,Mr. Carl Olof Jansson,21.0,Masculino,True,0,0,3ª,350034,Southampton,7.7958,
+393,Mr. Johan Birger Gustafsson,28.0,Masculino,False,0,2,3ª,3101277,Southampton,7.925,
+394,Miss. Marjorie Newell,23.0,Feminino,True,0,1,1ª,35273,Cherbourg,113.275,D36
+395,Mrs. Hjalmar Agnes Charlotta Bengtsson Sandstrom,24.0,Feminino,True,2,0,3ª,PP 9549,Southampton,16.7,G6
+396,Mr. Erik Johansson,22.0,Masculino,False,0,0,3ª,350052,Southampton,7.7958,
+397,Miss. Elina Olsson,31.0,Feminino,False,0,0,3ª,350407,Southampton,7.8542,
+398,Mr. Peter David McKane,46.0,Masculino,False,0,0,2ª,28403,Southampton,26.0,
+399,Dr. Alfred Pain,23.0,Masculino,False,0,0,2ª,244278,Southampton,10.5,
+400,Mrs. William H Jessie L Trout,28.0,Feminino,True,0,0,2ª,240929,Southampton,12.65,
+401,Mr. Juha Niskanen,39.0,Masculino,True,0,0,3ª,STON/O 2. 3101289,Southampton,7.925,
+402,Mr. John Adams,26.0,Masculino,False,0,0,3ª,341826,Southampton,8.05,
+403,Miss. Mari Aina Jussila,21.0,Feminino,False,0,1,3ª,4137,Southampton,9.825,
+404,Mr. Pekka Pietari Hakkarainen,28.0,Masculino,False,0,1,3ª,STON/O2. 3101279,Southampton,15.85,
+405,Miss. Marija Oreskovic,20.0,Feminino,False,0,0,3ª,315096,Southampton,8.6625,
+406,Mr. Shadrach Gale,34.0,Masculino,False,0,1,2ª,28664,Southampton,21.0,
+407,Mr. Carl/Charles Peter Widegren,51.0,Masculino,False,0,0,3ª,347064,Southampton,7.75,
+408,Master. William Rowe Richards,3.0,Masculino,True,1,1,2ª,29106,Southampton,18.75,
+409,Mr. Hans Martin Monsen Birkeland,21.0,Masculino,False,0,0,3ª,312992,Southampton,7.775,
+410,Miss. Ida Lefebre,,Feminino,False,1,3,3ª,4133,Southampton,25.4667,
+411,Mr. Todor Sdycoff,,Masculino,False,0,0,3ª,349222,Southampton,7.8958,
+412,Mr. Henry Hart,,Masculino,False,0,0,3ª,394140,Queenstown,6.8583,
+413,Miss. Daisy E Minahan,33.0,Feminino,True,0,1,1ª,19928,Queenstown,90.0,C78
+414,Mr. Alfred Fleming Cunningham,,Masculino,False,0,0,2ª,239853,Southampton,0.0,
+415,Mr. Johan Julian Sundman,44.0,Masculino,True,0,0,3ª,STON/O 2. 3101269,Southampton,7.925,
+416,Mrs. Thomas Annie Louise Rowley Meek,,Feminino,False,0,0,3ª,343095,Southampton,8.05,
+417,Mrs. James Vivian Lulu Thorne Christian Drew,34.0,Feminino,True,1,1,2ª,28220,Southampton,32.5,
+418,Miss. Lyyli Karoliina Silven,18.0,Feminino,True,2,0,2ª,250652,Southampton,13.0,
+419,Mr. William John Matthews,30.0,Masculino,False,0,0,2ª,28228,Southampton,13.0,
+420,Miss. Catharina Van Impe,10.0,Feminino,False,2,0,3ª,345773,Southampton,24.15,
+421,Mr. Stanio Gheorgheff,,Masculino,False,0,0,3ª,349254,Cherbourg,7.8958,
+422,Mr. David Charters,21.0,Masculino,False,0,0,3ª,A/5. 13032,Queenstown,7.7333,
+423,Mr. Leo Zimmerman,29.0,Masculino,False,0,0,3ª,315082,Southampton,7.875,
+424,Mrs. Ernst Gilbert Anna Sigrid Maria Brogren Danbom,28.0,Feminino,False,1,1,3ª,347080,Southampton,14.4,
+425,Mr. Viktor Richard Rosblom,18.0,Masculino,False,1,1,3ª,370129,Southampton,20.2125,
+426,Mr. Phillippe Wiseman,,Masculino,False,0,0,3ª,A/4. 34244,Southampton,7.25,
+427,Mrs. Charles V Ada Maria Winfield Clarke,28.0,Feminino,True,0,1,2ª,2003,Southampton,26.0,
+428,"Miss. Kate Florence ""Mrs Kate Louise Phillips Marshall"" Phillips",19.0,Feminino,True,0,0,2ª,250655,Southampton,26.0,
+429,Mr. James Flynn,,Masculino,False,0,0,3ª,364851,Queenstown,7.75,
+430,Mr. Berk Berk Trembisky Pickard,32.0,Masculino,True,0,0,3ª,SOTON/O.Q. 392078,Southampton,8.05,E10
+431,Mr. Mauritz Hakan Bjornstrom-Steffansson,28.0,Masculino,True,0,0,1ª,110564,Southampton,26.55,C52
+432,Mrs. Percival Florence Kate White Thorneycroft,,Feminino,True,0,1,3ª,376564,Southampton,16.1,
+433,Mrs. Charles Alexander Alice Adelaide Slow Louch,42.0,Feminino,True,0,1,2ª,SC/AH 3085,Southampton,26.0,
+434,Mr. Nikolai Erland Kallio,17.0,Masculino,False,0,0,3ª,STON/O 2. 3101274,Southampton,7.125,
+435,Mr. William Baird Silvey,50.0,Masculino,False,0,1,1ª,13507,Southampton,55.9,E44
+436,Miss. Lucile Polk Carter,14.0,Feminino,True,2,1,1ª,113760,Southampton,120.0,B96 B98
+437,"Miss. Doolina Margaret ""Daisy"" Ford",21.0,Feminino,False,2,2,3ª,W./C. 6608,Southampton,34.375,
+438,Mrs. Sidney Emily Hocking Richards,24.0,Feminino,True,3,2,2ª,29106,Southampton,18.75,
+439,Mr. Mark Fortune,64.0,Masculino,False,4,1,1ª,19950,Southampton,263.0,C23 C25 C27
+440,Mr. Johan Henrik Johannesson Kvillner,31.0,Masculino,False,0,0,2ª,C.A. 18723,Southampton,10.5,
+441,Mrs. Benjamin Esther Ada Bloomfield Hart,45.0,Feminino,True,1,1,2ª,F.C.C. 13529,Southampton,26.25,
+442,Mr. Leon Hampe,20.0,Masculino,False,0,0,3ª,345769,Southampton,9.5,
+443,Mr. Johan Emil Petterson,25.0,Masculino,False,0,1,3ª,347076,Southampton,7.775,
+444,Ms. Encarnacion Reynaldo,28.0,Feminino,True,0,0,2ª,230434,Southampton,13.0,
+445,Mr. Bernt Johannesen-Bratthammer,,Masculino,True,0,0,3ª,65306,Southampton,8.1125,
+446,Master. Washington Dodge,4.0,Masculino,True,2,0,1ª,33638,Southampton,81.8583,A34
+447,Miss. Madeleine Violet Mellinger,13.0,Feminino,True,1,0,2ª,250644,Southampton,19.5,
+448,Mr. Frederic Kimber Seward,34.0,Masculino,True,0,0,1ª,113794,Southampton,26.55,
+449,Miss. Marie Catherine Baclini,5.0,Feminino,True,1,2,3ª,2666,Cherbourg,19.2583,
+450,Major. Arthur Godfrey Peuchen,52.0,Masculino,True,0,0,1ª,113786,Southampton,30.5,C104
+451,Mr. Edwy Arthur West,36.0,Masculino,False,2,1,2ª,C.A. 34651,Southampton,27.75,
+452,Mr. Ingvald Olai Olsen Hagland,,Masculino,False,0,1,3ª,65303,Southampton,19.9667,
+453,Mr. Benjamin Laventall Foreman,30.0,Masculino,False,0,0,1ª,113051,Cherbourg,27.75,C111
+454,Mr. Samuel L Goldenberg,49.0,Masculino,True,0,1,1ª,17453,Cherbourg,89.1042,C92
+455,Mr. Joseph Peduzzi,,Masculino,False,0,0,3ª,A/5 2817,Southampton,8.05,
+456,Mr. Ivan Jalsevac,29.0,Masculino,True,0,0,3ª,349240,Cherbourg,7.8958,
+457,Mr. Francis Davis Millet,65.0,Masculino,False,0,0,1ª,13509,Southampton,26.55,E38
+458,Mrs. Frederick R Marion Kenyon,,Feminino,True,0,1,1ª,17464,Southampton,51.8625,D21
+459,Miss. Ellen Toomey,50.0,Feminino,True,0,0,2ª,F.C.C. 13531,Southampton,10.5,
+460,Mr. Maurice O'Connor,,Masculino,False,0,0,3ª,371060,Queenstown,7.75,
+461,Mr. Harry Anderson,48.0,Masculino,True,0,0,1ª,19952,Southampton,26.55,E12
+462,Mr. William Morley,34.0,Masculino,False,0,0,3ª,364506,Southampton,8.05,
+463,Mr. Arthur H Gee,47.0,Masculino,False,0,0,1ª,111320,Southampton,38.5,E63
+464,Mr. Jacob Christian Milling,48.0,Masculino,False,0,0,2ª,234360,Southampton,13.0,
+465,Mr. Simon Maisner,,Masculino,False,0,0,3ª,A/S 2816,Southampton,8.05,
+466,Mr. Manuel Estanslas Goncalves,38.0,Masculino,False,0,0,3ª,SOTON/O.Q. 3101306,Southampton,7.05,
+467,Mr. William Campbell,,Masculino,False,0,0,2ª,239853,Southampton,0.0,
+468,Mr. John Montgomery Smart,56.0,Masculino,False,0,0,1ª,113792,Southampton,26.55,
+469,Mr. James Scanlan,,Masculino,False,0,0,3ª,36209,Queenstown,7.725,
+470,Miss. Helene Barbara Baclini,0.75,Feminino,True,1,2,3ª,2666,Cherbourg,19.2583,
+471,Mr. Arthur Keefe,,Masculino,False,0,0,3ª,323592,Southampton,7.25,
+472,Mr. Luka Cacic,38.0,Masculino,False,0,0,3ª,315089,Southampton,8.6625,
+473,Mrs. Edwy Arthur Ada Mary Worth West,33.0,Feminino,True,2,1,2ª,C.A. 34651,Southampton,27.75,
+474,Mrs. Amin S Marie Marthe Thuillard Jerwan,23.0,Feminino,True,0,0,2ª,SC/AH Basle 541,Cherbourg,13.7917,D
+475,Miss. Ida Sofia Strandberg,22.0,Feminino,False,0,0,3ª,7553,Southampton,9.8375,
+476,Mr. George Quincy Clifford,,Masculino,False,0,0,1ª,110465,Southampton,52.0,A14
+477,Mr. Peter Henry Renouf,34.0,Masculino,False,0,1,2ª,31027,Southampton,21.0,
+478,Mr. Lewis Richard Braund,29.0,Masculino,False,0,1,3ª,3460,Southampton,7.0458,
+479,Mr. Nils August Karlsson,22.0,Masculino,False,0,0,3ª,350060,Southampton,7.5208,
+480,Miss. Hildur E Hirvonen,2.0,Feminino,True,1,0,3ª,3101298,Southampton,12.2875,
+481,Master. Harold Victor Goodwin,9.0,Masculino,False,2,5,3ª,CA 2144,Southampton,46.9,
+482,"Mr. Anthony Wood ""Archie"" Frost",,Masculino,False,0,0,2ª,239854,Southampton,0.0,
+483,Mr. Richard Henry Rouse,50.0,Masculino,False,0,0,3ª,A/5 3594,Southampton,8.05,
+484,Mrs. Hedwig Turkula,63.0,Feminino,True,0,0,3ª,4134,Southampton,9.5875,
+485,Mr. Dickinson H Bishop,25.0,Masculino,True,0,1,1ª,11967,Cherbourg,91.0792,B49
+486,Miss. Jeannie Lefebre,,Feminino,False,1,3,3ª,4133,Southampton,25.4667,
+487,Mrs. Frederick Maxfield Jane Anne Forby Hoyt,35.0,Feminino,True,0,1,1ª,19943,Southampton,90.0,C93
+488,Mr. Edward Austin Kent,58.0,Masculino,False,0,0,1ª,11771,Cherbourg,29.7,B37
+489,Mr. Francis William Somerton,30.0,Masculino,False,0,0,3ª,A.5. 18509,Southampton,8.05,
+490,"Master. Eden Leslie ""Neville"" Coutts",9.0,Masculino,True,1,1,3ª,C.A. 37671,Southampton,15.9,
+491,Mr. Konrad Mathias Reiersen Hagland,,Masculino,False,0,1,3ª,65304,Southampton,19.9667,
+492,Mr. Einar Windelov,21.0,Masculino,False,0,0,3ª,SOTON/OQ 3101317,Southampton,7.25,
+493,Mr. Harry Markland Molson,55.0,Masculino,False,0,0,1ª,113787,Southampton,30.5,C30
+494,Mr. Ramon Artagaveytia,71.0,Masculino,False,0,0,1ª,PC 17609,Cherbourg,49.5042,
+495,Mr. Edward Roland Stanley,21.0,Masculino,False,0,0,3ª,A/4 45380,Southampton,8.05,
+496,Mr. Gerious Yousseff,,Masculino,False,0,0,3ª,2627,Cherbourg,14.4583,
+497,Miss. Elizabeth Mussey Eustis,54.0,Feminino,True,0,1,1ª,36947,Cherbourg,78.2667,D20
+498,Mr. Frederick William Shellard,,Masculino,False,0,0,3ª,C.A. 6212,Southampton,15.1,
+499,Mrs. Hudson J C Bessie Waldo Daniels Allison,25.0,Feminino,False,2,1,1ª,113781,Southampton,151.55,C22 C26
+500,Mr. Olof Svensson,24.0,Masculino,False,0,0,3ª,350035,Southampton,7.7958,
+501,Mr. Petar Calic,17.0,Masculino,False,0,0,3ª,315086,Southampton,8.6625,
+502,Miss. Mary Canavan,21.0,Feminino,False,0,0,3ª,364846,Queenstown,7.75,
+503,Miss. Bridget Mary O'Sullivan,,Feminino,False,0,0,3ª,330909,Queenstown,7.6292,
+504,Miss. Kristina Sofia Laitinen,37.0,Feminino,False,0,0,3ª,4135,Southampton,9.5875,
+505,Miss. Roberta Maioni,16.0,Feminino,True,0,0,1ª,110152,Southampton,86.5,B79
+506,Mr. Victor de Satode Penasco y Castellana,18.0,Masculino,False,0,1,1ª,PC 17758,Cherbourg,108.9,C65
+507,Mrs. Frederick Charles Jane Richards Quick,33.0,Feminino,True,2,0,2ª,26360,Southampton,26.0,
+508,"Mr. George ""George Arthur Brayton"" Bradley",,Masculino,True,0,0,1ª,111427,Southampton,26.55,
+509,Mr. Henry Margido Olsen,28.0,Masculino,False,0,0,3ª,C 4001,Southampton,22.525,
+510,Mr. Fang Lang,26.0,Masculino,True,0,0,3ª,1601,Southampton,56.4958,
+511,Mr. Eugene Patrick Daly,29.0,Masculino,True,0,0,3ª,382651,Queenstown,7.75,
+512,Mr. James Webber,,Masculino,False,0,0,3ª,SOTON/OQ 3101316,Southampton,8.05,
+513,Mr. James Robert McGough,36.0,Masculino,True,0,0,1ª,PC 17473,Southampton,26.2875,E25
+514,Mrs. Martin Elizabeth L. Barrett Rothschild,54.0,Feminino,True,0,1,1ª,PC 17603,Cherbourg,59.4,
+515,Mr. Satio Coleff,24.0,Masculino,False,0,0,3ª,349209,Southampton,7.4958,
+516,Mr. William Anderson Walker,47.0,Masculino,False,0,0,1ª,36967,Southampton,34.0208,D46
+517,Mrs. Amelia Milley Lemore,34.0,Feminino,True,0,0,2ª,C.A. 34260,Southampton,10.5,F33
+518,Mr. Patrick Ryan,,Masculino,False,0,0,3ª,371110,Queenstown,24.15,
+519,"Mrs. William A Florence ""Mary"" Agnes Hughes Angle",36.0,Feminino,True,0,1,2ª,226875,Southampton,26.0,
+520,Mr. Stefo Pavlovic,32.0,Masculino,False,0,0,3ª,349242,Southampton,7.8958,
+521,Miss. Anne Perreault,30.0,Feminino,True,0,0,1ª,12749,Southampton,93.5,B73
+522,Mr. Janko Vovk,22.0,Masculino,False,0,0,3ª,349252,Southampton,7.8958,
+523,Mr. Sarkis Lahoud,,Masculino,False,0,0,3ª,2624,Cherbourg,7.225,
+524,Mrs. Louis Albert Ida Sophia Fischer Hippach,44.0,Feminino,True,1,0,1ª,111361,Cherbourg,57.9792,B18
+525,Mr. Fared Kassem,,Masculino,False,0,0,3ª,2700,Cherbourg,7.2292,
+526,Mr. James Farrell,40.5,Masculino,False,0,0,3ª,367232,Queenstown,7.75,
+527,Miss. Lucy Ridsdale,50.0,Feminino,True,0,0,2ª,W./C. 14258,Southampton,10.5,
+528,Mr. John Farthing,,Masculino,False,0,0,1ª,PC 17483,Southampton,221.7792,C95
+529,Mr. Johan Werner Salonen,39.0,Masculino,False,0,0,3ª,3101296,Southampton,7.925,
+530,Mr. Richard George Hocking,23.0,Masculino,False,1,2,2ª,29104,Southampton,11.5,
+531,Miss. Phyllis May Quick,2.0,Feminino,True,1,1,2ª,26360,Southampton,26.0,
+532,Mr. Nakli Toufik,,Masculino,False,0,0,3ª,2641,Cherbourg,7.2292,
+533,Mr. Joseph Jr Elias,17.0,Masculino,False,1,1,3ª,2690,Cherbourg,7.2292,
+534,Mrs. Catherine Catherine Rizk Peter,,Feminino,True,2,0,3ª,2668,Cherbourg,22.3583,
+535,Miss. Marija Cacic,30.0,Feminino,False,0,0,3ª,315084,Southampton,8.6625,
+536,Miss. Eva Miriam Hart,7.0,Feminino,True,2,0,2ª,F.C.C. 13529,Southampton,26.25,
+537,Major. Archibald Willingham Butt,45.0,Masculino,False,0,0,1ª,113050,Southampton,26.55,B38
+538,Miss. Bertha LeRoy,30.0,Feminino,True,0,0,1ª,PC 17761,Cherbourg,106.425,
+539,Mr. Samuel Beard Risien,,Masculino,False,0,0,3ª,364498,Southampton,14.5,
+540,Miss. Hedwig Margaritha Frolicher,22.0,Feminino,True,2,0,1ª,13568,Cherbourg,49.5,B39
+541,Miss. Harriet R Crosby,36.0,Feminino,True,2,0,1ª,WE/P 5735,Southampton,71.0,B22
+542,Miss. Ingeborg Constanzia Andersson,9.0,Feminino,False,2,4,3ª,347082,Southampton,31.275,
+543,Miss. Sigrid Elisabeth Andersson,11.0,Feminino,False,2,4,3ª,347082,Southampton,31.275,
+544,Mr. Edward Beane,32.0,Masculino,True,0,1,2ª,2908,Southampton,26.0,
+545,Mr. Walter Donald Douglas,50.0,Masculino,False,0,1,1ª,PC 17761,Cherbourg,106.425,C86
+546,Mr. Arthur Ernest Nicholson,64.0,Masculino,False,0,0,1ª,693,Southampton,26.0,
+547,Mrs. Edward Ethel Clarke Beane,19.0,Feminino,True,0,1,2ª,2908,Southampton,26.0,
+548,Mr. Julian Padro y Manent,,Masculino,True,0,0,2ª,SC/PARIS 2146,Cherbourg,13.8625,
+549,Mr. Frank John Goldsmith,33.0,Masculino,False,1,1,3ª,363291,Southampton,20.525,
+550,Master. John Morgan Jr Davies,8.0,Masculino,True,1,1,2ª,C.A. 33112,Southampton,36.75,
+551,Mr. John Borland Jr Thayer,17.0,Masculino,True,2,0,1ª,17421,Cherbourg,110.8833,C70
+552,Mr. Percival James R Sharp,27.0,Masculino,False,0,0,2ª,244358,Southampton,26.0,
+553,Mr. Timothy O'Brien,,Masculino,False,0,0,3ª,330979,Queenstown,7.8292,
+554,"Mr. Fahim ""Philip Zenni"" Leeni",22.0,Masculino,True,0,0,3ª,2620,Cherbourg,7.225,
+555,Miss. Velin Ohman,22.0,Feminino,True,0,0,3ª,347085,Southampton,7.775,
+556,Mr. George Wright,62.0,Masculino,False,0,0,1ª,113807,Southampton,26.55,
+557,"Lady. Lucille Christiana Sutherland ""Mrs Morgan"" Duff Gordon",48.0,Feminino,True,0,1,1ª,11755,Cherbourg,39.6,A16
+558,Mr. Victor Robbins,,Masculino,False,0,0,1ª,PC 17757,Cherbourg,227.525,
+559,Mrs. Emil Tillie Mandelbaum Taussig,39.0,Feminino,True,1,1,1ª,110413,Southampton,79.65,E67
+560,Mrs. Guillaume Joseph Emma de Messemaeker,36.0,Feminino,True,0,1,3ª,345572,Southampton,17.4,
+561,Mr. Thomas Rowan Morrow,,Masculino,False,0,0,3ª,372622,Queenstown,7.75,
+562,Mr. Husein Sivic,40.0,Masculino,False,0,0,3ª,349251,Southampton,7.8958,
+563,Mr. Robert Douglas Norman,28.0,Masculino,False,0,0,2ª,218629,Southampton,13.5,
+564,Mr. John Simmons,,Masculino,False,0,0,3ª,SOTON/OQ 392082,Southampton,8.05,
+565,Miss. Marion Ogden Meanwell,,Feminino,False,0,0,3ª,SOTON/O.Q. 392087,Southampton,8.05,
+566,Mr. Alfred J Davies,24.0,Masculino,False,0,2,3ª,A/4 48871,Southampton,24.15,
+567,Mr. Ilia Stoytcheff,19.0,Masculino,False,0,0,3ª,349205,Southampton,7.8958,
+568,Mrs. Nils Alma Cornelia Berglund Palsson,29.0,Feminino,False,4,0,3ª,349909,Southampton,21.075,
+569,Mr. Tannous Doharr,,Masculino,False,0,0,3ª,2686,Cherbourg,7.2292,
+570,Mr. Carl Jonsson,32.0,Masculino,True,0,0,3ª,350417,Southampton,7.8542,
+571,Mr. George Harris,62.0,Masculino,True,0,0,2ª,S.W./PP 752,Southampton,10.5,
+572,Mrs. Edward Dale Charlotte Lamson Appleton,53.0,Feminino,True,0,2,1ª,11769,Southampton,51.4792,C101
+573,"Mr. John Irwin ""Irving"" Flynn",36.0,Masculino,True,0,0,1ª,PC 17474,Southampton,26.3875,E25
+574,Miss. Mary Kelly,,Feminino,True,0,0,3ª,14312,Queenstown,7.75,
+575,Mr. Alfred George John Rush,16.0,Masculino,False,0,0,3ª,A/4. 20589,Southampton,8.05,
+576,Mr. George Patchett,19.0,Masculino,False,0,0,3ª,358585,Southampton,14.5,
+577,Miss. Ethel Garside,34.0,Feminino,True,0,0,2ª,243880,Southampton,13.0,
+578,Mrs. William Baird Alice Munger Silvey,39.0,Feminino,True,0,1,1ª,13507,Southampton,55.9,E44
+579,Mrs. Joseph Maria Elias Caram,,Feminino,False,0,1,3ª,2689,Cherbourg,14.4583,
+580,Mr. Eiriik Jussila,32.0,Masculino,True,0,0,3ª,STON/O 2. 3101286,Southampton,7.925,
+581,Miss. Julie Rachel Christy,25.0,Feminino,True,1,1,2ª,237789,Southampton,30.0,
+582,Mrs. John Borland Marian Longstreth Morris Thayer,39.0,Feminino,True,1,1,1ª,17421,Cherbourg,110.8833,C68
+583,Mr. William James Downton,54.0,Masculino,False,0,0,2ª,28403,Southampton,26.0,
+584,Mr. John Hugo Ross,36.0,Masculino,False,0,0,1ª,13049,Cherbourg,40.125,A10
+585,Mr. Uscher Paulner,,Masculino,False,0,0,3ª,3411,Cherbourg,8.7125,
+586,Miss. Ruth Taussig,18.0,Feminino,True,2,0,1ª,110413,Southampton,79.65,E68
+587,Mr. John Denzil Jarvis,47.0,Masculino,False,0,0,2ª,237565,Southampton,15.0,
+588,Mr. Maxmillian Frolicher-Stehli,60.0,Masculino,True,1,1,1ª,13567,Cherbourg,79.2,B41
+589,Mr. Eliezer Gilinski,22.0,Masculino,False,0,0,3ª,14973,Southampton,8.05,
+590,Mr. Joseph Murdlin,,Masculino,False,0,0,3ª,A./5. 3235,Southampton,8.05,
+591,Mr. Matti Rintamaki,35.0,Masculino,False,0,0,3ª,STON/O 2. 3101273,Southampton,7.125,
+592,Mrs. Walter Bertram Martha Eustis Stephenson,52.0,Feminino,True,0,1,1ª,36947,Cherbourg,78.2667,D20
+593,Mr. William James Elsbury,47.0,Masculino,False,0,0,3ª,A/5 3902,Southampton,7.25,
+594,Miss. Mary Bourke,,Feminino,False,2,0,3ª,364848,Queenstown,7.75,
+595,Mr. John Henry Chapman,37.0,Masculino,False,0,1,2ª,SC/AH 29037,Southampton,26.0,
+596,Mr. Jean Baptiste Van Impe,36.0,Masculino,False,1,1,3ª,345773,Southampton,24.15,
+597,Miss. Jessie Wills Leitch,,Feminino,True,0,0,2ª,248727,Southampton,33.0,
+598,Mr. Alfred Johnson,49.0,Masculino,False,0,0,3ª,LINE,Southampton,0.0,
+599,Mr. Hanna Boulos,,Masculino,False,0,0,3ª,2664,Cherbourg,7.225,
+600,"Sir. Cosmo Edmund ""Mr Morgan"" Duff Gordon",49.0,Masculino,True,0,1,1ª,PC 17485,Cherbourg,56.9292,A20
+601,Mrs. Sidney Samuel Amy Frances Christy Jacobsohn,24.0,Feminino,True,1,2,2ª,243847,Southampton,27.0,
+602,Mr. Petco Slabenoff,,Masculino,False,0,0,3ª,349214,Southampton,7.8958,
+603,Mr. Charles H Harrington,,Masculino,False,0,0,1ª,113796,Southampton,42.4,
+604,Mr. Ernst William Torber,44.0,Masculino,False,0,0,3ª,364511,Southampton,8.05,
+605,"Mr. Harry ""Mr E Haven"" Homer",35.0,Masculino,True,0,0,1ª,111426,Cherbourg,26.55,
+606,Mr. Edvard Bengtsson Lindell,36.0,Masculino,False,0,1,3ª,349910,Southampton,15.55,
+607,Mr. Milan Karaic,30.0,Masculino,False,0,0,3ª,349246,Southampton,7.8958,
+608,Mr. Robert Williams Daniel,27.0,Masculino,True,0,0,1ª,113804,Southampton,30.5,
+609,Mrs. Joseph Juliette Marie Louise Lafargue Laroche,22.0,Feminino,True,2,1,2ª,SC/Paris 2123,Cherbourg,41.5792,
+610,Miss. Elizabeth W Shutes,40.0,Feminino,True,0,0,1ª,PC 17582,Southampton,153.4625,C125
+611,Mrs. Anders Johan Alfrida Konstantia Brogren Andersson,39.0,Feminino,False,5,1,3ª,347082,Southampton,31.275,
+612,Mr. Jose Neto Jardin,,Masculino,False,0,0,3ª,SOTON/O.Q. 3101305,Southampton,7.05,
+613,Miss. Margaret Jane Murphy,,Feminino,True,0,1,3ª,367230,Queenstown,15.5,
+614,Mr. John Horgan,,Masculino,False,0,0,3ª,370377,Queenstown,7.75,
+615,Mr. William Alfred Brocklebank,35.0,Masculino,False,0,0,3ª,364512,Southampton,8.05,
+616,Miss. Alice Herman,24.0,Feminino,True,2,1,2ª,220845,Southampton,65.0,
+617,Mr. Ernst Gilbert Danbom,34.0,Masculino,False,1,1,3ª,347080,Southampton,14.4,
+618,Mrs. William Arthur Cordelia K Stanlick Lobb,26.0,Feminino,False,0,1,3ª,A/5. 3336,Southampton,16.1,
+619,Miss. Marion Louise Becker,4.0,Feminino,True,1,2,2ª,230136,Southampton,39.0,F4
+620,Mr. Lawrence Gavey,26.0,Masculino,False,0,0,2ª,31028,Southampton,10.5,
+621,Mr. Antoni Yasbeck,27.0,Masculino,False,0,1,3ª,2659,Cherbourg,14.4542,
+622,Mr. Edwin Nelson Jr Kimball,42.0,Masculino,True,0,1,1ª,11753,Southampton,52.5542,D19
+623,Mr. Sahid Nakid,20.0,Masculino,True,1,1,3ª,2653,Cherbourg,15.7417,
+624,Mr. Henry Damsgaard Hansen,21.0,Masculino,False,0,0,3ª,350029,Southampton,7.8542,
+625,"Mr. David John ""Dai"" Bowen",21.0,Masculino,False,0,0,3ª,54636,Southampton,16.1,
+626,Mr. Frederick Sutton,61.0,Masculino,False,0,0,1ª,36963,Southampton,32.3208,D50
+627,Rev. Charles Leonard Kirkland,57.0,Masculino,False,0,0,2ª,219533,Queenstown,12.35,
+628,Miss. Gretchen Fiske Longley,21.0,Feminino,True,0,0,1ª,13502,Southampton,77.9583,D9
+629,Mr. Guentcho Bostandyeff,26.0,Masculino,False,0,0,3ª,349224,Southampton,7.8958,
+630,Mr. Patrick D O'Connell,,Masculino,False,0,0,3ª,334912,Queenstown,7.7333,
+631,Mr. Algernon Henry Wilson Barkworth,80.0,Masculino,True,0,0,1ª,27042,Southampton,30.0,A23
+632,Mr. Johan Svensson Lundahl,51.0,Masculino,False,0,0,3ª,347743,Southampton,7.0542,
+633,Dr. Max Stahelin-Maeglin,32.0,Masculino,True,0,0,1ª,13214,Cherbourg,30.5,B50
+634,Mr. William Henry Marsh Parr,,Masculino,False,0,0,1ª,112052,Southampton,0.0,
+635,Miss. Mabel Skoog,9.0,Feminino,False,2,3,3ª,347088,Southampton,27.9,
+636,Miss. Mary Davis,28.0,Feminino,True,0,0,2ª,237668,Southampton,13.0,
+637,Mr. Antti Gustaf Leinonen,32.0,Masculino,False,0,0,3ª,STON/O 2. 3101292,Southampton,7.925,
+638,Mr. Harvey Collyer,31.0,Masculino,False,1,1,2ª,C.A. 31921,Southampton,26.25,
+639,Mrs. Juha Maria Emilia Ojala Panula,41.0,Feminino,False,5,0,3ª,3101295,Southampton,39.6875,
+640,Mr. Percival Thorneycroft,,Masculino,False,0,1,3ª,376564,Southampton,16.1,
+641,Mr. Hans Peder Jensen,20.0,Masculino,False,0,0,3ª,350050,Southampton,7.8542,
+642,Mlle. Emma Sagesser,24.0,Feminino,True,0,0,1ª,PC 17477,Cherbourg,69.3,B35
+643,Miss. Margit Elizabeth Skoog,2.0,Feminino,False,2,3,3ª,347088,Southampton,27.9,
+644,Mr. Choong Foo,,Masculino,True,0,0,3ª,1601,Southampton,56.4958,
+645,Miss. Eugenie Baclini,0.75,Feminino,True,1,2,3ª,2666,Cherbourg,19.2583,
+646,Mr. Henry Sleeper Harper,48.0,Masculino,True,0,1,1ª,PC 17572,Cherbourg,76.7292,D33
+647,Mr. Liudevit Cor,19.0,Masculino,False,0,0,3ª,349231,Southampton,7.8958,
+648,Col. Oberst Alfons Simonius-Blumer,56.0,Masculino,True,0,0,1ª,13213,Cherbourg,35.5,A26
+649,Mr. Edward Willey,,Masculino,False,0,0,3ª,S.O./P.P. 751,Southampton,7.55,
+650,Miss. Amy Zillah Elsie Stanley,23.0,Feminino,True,0,0,3ª,CA. 2314,Southampton,7.55,
+651,Mr. Mito Mitkoff,,Masculino,False,0,0,3ª,349221,Southampton,7.8958,
+652,Miss. Elsie Doling,18.0,Feminino,True,1,0,2ª,231919,Southampton,23.0,
+653,Mr. Johannes Halvorsen Kalvik,21.0,Masculino,False,0,0,3ª,8475,Southampton,8.4333,
+654,"Miss. Hanora ""Norah"" O'Leary",,Feminino,True,0,0,3ª,330919,Queenstown,7.8292,
+655,"Miss. Hanora ""Nora"" Hegarty",18.0,Feminino,False,0,0,3ª,365226,Queenstown,6.75,
+656,Mr. Leonard Mark Hickman,24.0,Masculino,False,0,2,2ª,S.O.C. 14879,Southampton,73.5,
+657,Mr. Alexander Radeff,,Masculino,False,0,0,3ª,349223,Southampton,7.8958,
+658,Mrs. John Catherine Bourke,32.0,Feminino,False,1,1,3ª,364849,Queenstown,15.5,
+659,Mr. George Floyd Eitemiller,23.0,Masculino,False,0,0,2ª,29751,Southampton,13.0,
+660,Mr. Arthur Webster Newell,58.0,Masculino,False,2,0,1ª,35273,Cherbourg,113.275,D48
+661,Dr. Henry William Frauenthal,50.0,Masculino,True,0,2,1ª,PC 17611,Southampton,133.65,
+662,Mr. Mohamed Badt,40.0,Masculino,False,0,0,3ª,2623,Cherbourg,7.225,
+663,Mr. Edward Pomeroy Colley,47.0,Masculino,False,0,0,1ª,5727,Southampton,25.5875,E58
+664,Mr. Peju Coleff,36.0,Masculino,False,0,0,3ª,349210,Southampton,7.4958,
+665,Mr. Eino William Lindqvist,20.0,Masculino,True,0,1,3ª,STON/O 2. 3101285,Southampton,7.925,
+666,Mr. Lewis Hickman,32.0,Masculino,False,0,2,2ª,S.O.C. 14879,Southampton,73.5,
+667,Mr. Reginald Fenton Butler,25.0,Masculino,False,0,0,2ª,234686,Southampton,13.0,
+668,Mr. Knud Paust Rommetvedt,,Masculino,False,0,0,3ª,312993,Southampton,7.775,
+669,Mr. Jacob Cook,43.0,Masculino,False,0,0,3ª,A/5 3536,Southampton,8.05,
+670,Mrs. Elmer Zebley Juliet Cummins Wright Taylor,,Feminino,True,0,1,1ª,19996,Southampton,52.0,C126
+671,Mrs. Thomas William Solomon Elizabeth Catherine Ford Brown,40.0,Feminino,True,1,1,2ª,29750,Southampton,39.0,
+672,Mr. Thornton Davidson,31.0,Masculino,False,0,1,1ª,F.C. 12750,Southampton,52.0,B71
+673,Mr. Henry Michael Mitchell,70.0,Masculino,False,0,0,2ª,C.A. 24580,Southampton,10.5,
+674,Mr. Charles Wilhelms,31.0,Masculino,True,0,0,2ª,244270,Southampton,13.0,
+675,Mr. Ennis Hastings Watson,,Masculino,False,0,0,2ª,239856,Southampton,0.0,
+676,Mr. Gustaf Hjalmar Edvardsson,18.0,Masculino,False,0,0,3ª,349912,Southampton,7.775,
+677,Mr. Frederick Charles Sawyer,24.5,Masculino,False,0,0,3ª,342826,Southampton,8.05,
+678,Miss. Anna Sofia Turja,18.0,Feminino,True,0,0,3ª,4138,Southampton,9.8417,
+679,Mrs. Frederick Augusta Tyler Goodwin,43.0,Feminino,False,6,1,3ª,CA 2144,Southampton,46.9,
+680,Mr. Thomas Drake Martinez Cardeza,36.0,Masculino,True,1,0,1ª,PC 17755,Cherbourg,512.3292,B51 B53 B55
+681,Miss. Katie Peters,,Feminino,False,0,0,3ª,330935,Queenstown,8.1375,
+682,Mr. Hammad Hassab,27.0,Masculino,True,0,0,1ª,PC 17572,Cherbourg,76.7292,D49
+683,Mr. Thor Anderson Olsvigen,20.0,Masculino,False,0,0,3ª,6563,Southampton,9.225,
+684,Mr. Charles Edward Goodwin,14.0,Masculino,False,2,5,3ª,CA 2144,Southampton,46.9,
+685,Mr. Thomas William Solomon Brown,60.0,Masculino,False,1,1,2ª,29750,Southampton,39.0,
+686,Mr. Joseph Philippe Lemercier Laroche,25.0,Masculino,False,2,1,2ª,SC/Paris 2123,Cherbourg,41.5792,
+687,Mr. Jaako Arnold Panula,14.0,Masculino,False,1,4,3ª,3101295,Southampton,39.6875,
+688,Mr. Branko Dakic,19.0,Masculino,False,0,0,3ª,349228,Southampton,10.1708,
+689,Mr. Eberhard Thelander Fischer,18.0,Masculino,False,0,0,3ª,350036,Southampton,7.7958,
+690,Miss. Georgette Alexandra Madill,15.0,Feminino,True,1,0,1ª,24160,Southampton,211.3375,B5
+691,Mr. Albert Adrian Dick,31.0,Masculino,True,0,1,1ª,17474,Southampton,57.0,B20
+692,Miss. Manca Karun,4.0,Feminino,True,1,0,3ª,349256,Cherbourg,13.4167,
+693,Mr. Ali Lam,,Masculino,True,0,0,3ª,1601,Southampton,56.4958,
+694,Mr. Khalil Saad,25.0,Masculino,False,0,0,3ª,2672,Cherbourg,7.225,
+695,Col. John Weir,60.0,Masculino,False,0,0,1ª,113800,Southampton,26.55,
+696,Mr. Charles Henry Chapman,52.0,Masculino,False,0,0,2ª,248731,Southampton,13.5,
+697,Mr. James Kelly,44.0,Masculino,False,0,0,3ª,363592,Southampton,8.05,
+698,"Miss. Katherine ""Katie"" Mullens",,Feminino,True,0,0,3ª,35852,Queenstown,7.7333,
+699,Mr. John Borland Thayer,49.0,Masculino,False,1,1,1ª,17421,Cherbourg,110.8833,C68
+700,Mr. Adolf Mathias Nicolai Olsen Humblen,42.0,Masculino,False,0,0,3ª,348121,Southampton,7.65,F G63
+701,Mrs. John Jacob Madeleine Talmadge Force Astor,18.0,Feminino,True,0,1,1ª,PC 17757,Cherbourg,227.525,C62 C64
+702,Mr. Spencer Victor Silverthorne,35.0,Masculino,True,0,0,1ª,PC 17475,Southampton,26.2875,E24
+703,Miss. Saiide Barbara,18.0,Feminino,False,1,0,3ª,2691,Cherbourg,14.4542,
+704,Mr. Martin Gallagher,25.0,Masculino,False,0,0,3ª,36864,Queenstown,7.7417,
+705,Mr. Henrik Juul Hansen,26.0,Masculino,False,0,1,3ª,350025,Southampton,7.8542,
+706,"Mr. Henry Samuel ""Mr Henry Marshall"" Morley",39.0,Masculino,False,0,0,2ª,250655,Southampton,26.0,
+707,"Mrs. Florence ""Fannie"" Kelly",45.0,Feminino,True,0,0,2ª,223596,Southampton,13.5,
+708,Mr. Edward Pennington Calderhead,42.0,Masculino,True,0,0,1ª,PC 17476,Southampton,26.2875,E24
+709,Miss. Alice Cleaver,22.0,Feminino,True,0,0,1ª,113781,Southampton,151.55,
+710,"Master. Halim Gonios ""William George"" Moubarek",,Masculino,True,1,1,3ª,2661,Cherbourg,15.2458,
+711,"Mlle. Berthe Antonine ""Mrs de Villiers"" Mayne",24.0,Feminino,True,0,0,1ª,PC 17482,Cherbourg,49.5042,C90
+712,Mr. Herman Klaber,,Masculino,False,0,0,1ª,113028,Southampton,26.55,C124
+713,Mr. Elmer Zebley Taylor,48.0,Masculino,True,0,1,1ª,19996,Southampton,52.0,C126
+714,Mr. August Viktor Larsson,29.0,Masculino,False,0,0,3ª,7545,Southampton,9.4833,
+715,Mr. Samuel Greenberg,52.0,Masculino,False,0,0,2ª,250647,Southampton,13.0,
+716,Mr. Peter Andreas Lauritz Andersen Soholt,19.0,Masculino,False,0,0,3ª,348124,Southampton,7.65,F G73
+717,Miss. Caroline Louise Endres,38.0,Feminino,True,0,0,1ª,PC 17757,Cherbourg,227.525,C45
+718,"Miss. Edwina Celia ""Winnie"" Troutt",27.0,Feminino,True,0,0,2ª,34218,Southampton,10.5,E101
+719,Mr. Michael McEvoy,,Masculino,False,0,0,3ª,36568,Queenstown,15.5,
+720,Mr. Malkolm Joackim Johnson,33.0,Masculino,False,0,0,3ª,347062,Southampton,7.775,
+721,"Miss. Annie Jessie ""Nina"" Harper",6.0,Feminino,True,1,0,2ª,248727,Southampton,33.0,
+722,Mr. Svend Lauritz Jensen,17.0,Masculino,False,0,1,3ª,350048,Southampton,7.0542,
+723,Mr. William Henry Gillespie,34.0,Masculino,False,0,0,2ª,12233,Southampton,13.0,
+724,Mr. Henry Price Hodges,50.0,Masculino,False,0,0,2ª,250643,Southampton,13.0,
+725,Mr. Norman Campbell Chambers,27.0,Masculino,True,0,1,1ª,113806,Southampton,53.1,E8
+726,Mr. Luka Oreskovic,20.0,Masculino,False,0,0,3ª,315094,Southampton,8.6625,
+727,Mrs. Peter Henry Lillian Jefferys Renouf,30.0,Feminino,True,0,3,2ª,31027,Southampton,21.0,
+728,Miss. Margareth Mannion,,Feminino,True,0,0,3ª,36866,Queenstown,7.7375,
+729,Mr. Kurt Arnold Gottfrid Bryhl,25.0,Masculino,False,0,1,2ª,236853,Southampton,26.0,
+730,Miss. Pieta Sofia Ilmakangas,25.0,Feminino,False,0,1,3ª,STON/O2. 3101271,Southampton,7.925,
+731,Miss. Elisabeth Walton Allen,29.0,Feminino,True,0,0,1ª,24160,Southampton,211.3375,B5
+732,Mr. Houssein G N Hassan,11.0,Masculino,False,0,0,3ª,2699,Cherbourg,18.7875,
+733,Mr. Robert J Knight,,Masculino,False,0,0,2ª,239855,Southampton,0.0,
+734,Mr. William John Berriman,23.0,Masculino,False,0,0,2ª,28425,Southampton,13.0,
+735,Mr. Moses Aaron Troupiansky,23.0,Masculino,False,0,0,2ª,233639,Southampton,13.0,
+736,Mr. Leslie Williams,28.5,Masculino,False,0,0,3ª,54636,Southampton,16.1,
+737,Mrs. Edward Margaret Ann Watson Ford,48.0,Feminino,False,3,1,3ª,W./C. 6608,Southampton,34.375,
+738,Mr. Gustave J Lesurer,35.0,Masculino,True,0,0,1ª,PC 17755,Cherbourg,512.3292,B101
+739,Mr. Kanio Ivanoff,,Masculino,False,0,0,3ª,349201,Southampton,7.8958,
+740,Mr. Minko Nankoff,,Masculino,False,0,0,3ª,349218,Southampton,7.8958,
+741,Mr. Walter James Hawksford,,Masculino,True,0,0,1ª,16988,Southampton,30.0,D45
+742,Mr. Tyrell William Cavendish,36.0,Masculino,False,0,1,1ª,19877,Southampton,78.85,C46
+743,"Miss. Susan Parker ""Suzette"" Ryerson",21.0,Feminino,True,2,2,1ª,PC 17608,Cherbourg,262.375,B57 B59 B63 B66
+744,Mr. Neal McNamee,24.0,Masculino,False,0,1,3ª,376566,Southampton,16.1,
+745,Mr. Juho Stranden,31.0,Masculino,True,0,0,3ª,STON/O 2. 3101288,Southampton,7.925,
+746,Capt. Edward Gifford Crosby,70.0,Masculino,False,1,1,1ª,WE/P 5735,Southampton,71.0,B22
+747,Mr. Rossmore Edward Abbott,16.0,Masculino,False,1,1,3ª,C.A. 2673,Southampton,20.25,
+748,Miss. Anna Sinkkonen,30.0,Feminino,True,0,0,2ª,250648,Southampton,13.0,
+749,Mr. Daniel Warner Marvin,19.0,Masculino,False,0,1,1ª,113773,Southampton,53.1,D30
+750,Mr. Michael Connaghton,31.0,Masculino,False,0,0,3ª,335097,Queenstown,7.75,
+751,Miss. Joan Wells,4.0,Feminino,True,1,1,2ª,29103,Southampton,23.0,
+752,Master. Meier Moor,6.0,Masculino,True,1,0,3ª,392096,Southampton,12.475,E121
+753,Mr. Johannes Joseph Vande Velde,33.0,Masculino,False,0,0,3ª,345780,Southampton,9.5,
+754,Mr. Lalio Jonkoff,23.0,Masculino,False,0,0,3ª,349204,Southampton,7.8958,
+755,Mrs. Samuel Jane Laver Herman,48.0,Feminino,True,2,1,2ª,220845,Southampton,65.0,
+756,Master. Viljo Hamalainen,0.67,Masculino,True,1,1,2ª,250649,Southampton,14.5,
+757,Mr. August Sigfrid Carlsson,28.0,Masculino,False,0,0,3ª,350042,Southampton,7.7958,
+758,Mr. Percy Andrew Bailey,18.0,Masculino,False,0,0,2ª,29108,Southampton,11.5,
+759,Mr. Thomas Leonard Theobald,34.0,Masculino,False,0,0,3ª,363294,Southampton,8.05,
+760,the Countess. of Lucy Noel Martha Dyer-Edwards Rothes,33.0,Feminino,True,0,0,1ª,110152,Southampton,86.5,B77
+761,Mr. John Garfirth,,Masculino,False,0,0,3ª,358585,Southampton,14.5,
+762,Mr. Iisakki Antino Aijo Nirva,41.0,Masculino,False,0,0,3ª,SOTON/O2 3101272,Southampton,7.125,
+763,Mr. Hanna Assi Barah,20.0,Masculino,True,0,0,3ª,2663,Cherbourg,7.2292,
+764,Mrs. William Ernest Lucile Polk Carter,36.0,Feminino,True,2,1,1ª,113760,Southampton,120.0,B96 B98
+765,Mr. Hans Linus Eklund,16.0,Masculino,False,0,0,3ª,347074,Southampton,7.775,
+766,Mrs. John C Anna Andrews Hogeboom,51.0,Feminino,True,0,1,1ª,13502,Southampton,77.9583,D11
+767,Dr. Arthur Jackson Brewe,,Masculino,False,0,0,1ª,112379,Cherbourg,39.6,
+768,Miss. Mary Mangan,30.5,Feminino,False,0,0,3ª,364850,Queenstown,7.75,
+769,Mr. Daniel J Moran,,Masculino,False,0,1,3ª,371110,Queenstown,24.15,
+770,Mr. Daniel Danielsen Gronnestad,32.0,Masculino,False,0,0,3ª,8471,Southampton,8.3625,
+771,Mr. Rene Aime Lievens,24.0,Masculino,False,0,0,3ª,345781,Southampton,9.5,
+772,Mr. Niels Peder Jensen,48.0,Masculino,False,0,0,3ª,350047,Southampton,7.8542,
+773,Mrs. Mary Mack,57.0,Feminino,False,0,0,2ª,S.O./P.P. 3,Southampton,10.5,E77
+774,Mr. Dibo Elias,,Masculino,False,0,0,3ª,2674,Cherbourg,7.225,
+775,Mrs. Elizabeth Eliza Needs Hocking,54.0,Feminino,True,3,1,2ª,29105,Southampton,23.0,
+776,Mr. Pehr Fabian Oliver Malkolm Myhrman,18.0,Masculino,False,0,0,3ª,347078,Southampton,7.75,
+777,Mr. Roger Tobin,,Masculino,False,0,0,3ª,383121,Queenstown,7.75,F38
+778,Miss. Virginia Ethel Emanuel,5.0,Feminino,True,0,0,3ª,364516,Southampton,12.475,
+779,Mr. Thomas J Kilgannon,,Masculino,False,0,0,3ª,36865,Queenstown,7.7375,
+780,Mrs. Edward Scott Elisabeth Walton McMillan Robert,43.0,Feminino,True,1,0,1ª,24160,Southampton,211.3375,B3
+781,Miss. Banoura Ayoub,13.0,Feminino,True,0,0,3ª,2687,Cherbourg,7.2292,
+782,Mrs. Albert Adrian Vera Gillespie Dick,17.0,Feminino,True,0,1,1ª,17474,Southampton,57.0,B20
+783,Mr. Milton Clyde Long,29.0,Masculino,False,0,0,1ª,113501,Southampton,30.0,D6
+784,Mr. Andrew G Johnston,,Masculino,False,2,1,3ª,W./C. 6607,Southampton,23.45,
+785,Mr. William Ali,25.0,Masculino,False,0,0,3ª,SOTON/O.Q. 3101312,Southampton,7.05,
+786,Mr. Abraham David Lishin Harmer,25.0,Masculino,False,0,0,3ª,374887,Southampton,7.25,
+787,Miss. Anna Sofia Sjoblom,18.0,Feminino,True,0,0,3ª,3101265,Southampton,7.4958,
+788,Master. George Hugh Rice,8.0,Masculino,False,1,4,3ª,382652,Queenstown,29.125,
+789,Master. Bertram Vere Dean,1.0,Masculino,True,2,1,3ª,C.A. 2315,Southampton,20.575,
+790,Mr. Benjamin Guggenheim,46.0,Masculino,False,0,0,1ª,PC 17593,Cherbourg,79.2,B82 B84
+791,"Mr. Andrew ""Andy"" Keane",,Masculino,False,0,0,3ª,12460,Queenstown,7.75,
+792,Mr. Alfred Gaskell,16.0,Masculino,False,0,0,2ª,239865,Southampton,26.0,
+793,Miss. Stella Anna Sage,,Feminino,False,2,8,3ª,CA. 2343,Southampton,69.55,
+794,Mr. William Fisher Hoyt,,Masculino,False,0,0,1ª,PC 17600,Cherbourg,30.6958,
+795,Mr. Ristiu Dantcheff,25.0,Masculino,False,0,0,3ª,349203,Southampton,7.8958,
+796,Mr. Richard Otter,39.0,Masculino,False,0,0,2ª,28213,Southampton,13.0,
+797,Dr. Alice Farnham Leader,49.0,Feminino,True,0,0,1ª,17465,Southampton,25.9292,D17
+798,Mrs. Mara Osman,31.0,Feminino,True,0,0,3ª,349244,Southampton,8.6833,
+799,Mr. Yousseff Ibrahim Shawah,30.0,Masculino,False,0,0,3ª,2685,Cherbourg,7.2292,
+800,Mrs. Jean Baptiste Rosalie Paula Govaert Van Impe,30.0,Feminino,False,1,1,3ª,345773,Southampton,24.15,
+801,Mr. Martin Ponesell,34.0,Masculino,False,0,0,2ª,250647,Southampton,13.0,
+802,Mrs. Harvey Charlotte Annie Tate Collyer,31.0,Feminino,True,1,1,2ª,C.A. 31921,Southampton,26.25,
+803,Master. William Thornton II Carter,11.0,Masculino,True,2,1,1ª,113760,Southampton,120.0,B96 B98
+804,Master. Assad Alexander Thomas,0.42,Masculino,True,1,0,3ª,2625,Cherbourg,8.5167,
+805,Mr. Oskar Arvid Hedman,27.0,Masculino,True,0,0,3ª,347089,Southampton,6.975,
+806,Mr. Karl Johan Johansson,31.0,Masculino,False,0,0,3ª,347063,Southampton,7.775,
+807,Mr. Thomas Jr Andrews,39.0,Masculino,False,0,0,1ª,112050,Southampton,0.0,A36
+808,Miss. Ellen Natalia Pettersson,18.0,Feminino,False,0,0,3ª,347087,Southampton,7.775,
+809,Mr. August Meyer,39.0,Masculino,False,0,0,2ª,248723,Southampton,13.0,
+810,Mrs. Norman Campbell Bertha Griggs Chambers,33.0,Feminino,True,0,1,1ª,113806,Southampton,53.1,E8
+811,Mr. William Alexander,26.0,Masculino,False,0,0,3ª,3474,Southampton,7.8875,
+812,Mr. James Lester,39.0,Masculino,False,0,0,3ª,A/4 48871,Southampton,24.15,
+813,Mr. Richard James Slemen,35.0,Masculino,False,0,0,2ª,28206,Southampton,10.5,
+814,Miss. Ebba Iris Alfrida Andersson,6.0,Feminino,False,2,4,3ª,347082,Southampton,31.275,
+815,Mr. Ernest Portage Tomlin,30.5,Masculino,False,0,0,3ª,364499,Southampton,8.05,
+816,Mr. Richard Fry,,Masculino,False,0,0,1ª,112058,Southampton,0.0,B102
+817,Miss. Wendla Maria Heininen,23.0,Feminino,False,0,0,3ª,STON/O2. 3101290,Southampton,7.925,
+818,Mr. Albert Mallet,31.0,Masculino,False,1,1,2ª,S.C./PARIS 2079,Cherbourg,37.0042,
+819,Mr. John Fredrik Alexander Holm,43.0,Masculino,False,0,0,3ª,C 7075,Southampton,6.45,
+820,Master. Karl Thorsten Skoog,10.0,Masculino,False,2,3,3ª,347088,Southampton,27.9,
+821,Mrs. Charles Melville Clara Jennings Gregg Hays,52.0,Feminino,True,1,1,1ª,12749,Southampton,93.5,B69
+822,Mr. Nikola Lulic,27.0,Masculino,True,0,0,3ª,315098,Southampton,8.6625,
+823,Jonkheer. John George Reuchlin,38.0,Masculino,False,0,0,1ª,19972,Southampton,0.0,
+824,Mrs. Beila Moor,27.0,Feminino,True,1,0,3ª,392096,Southampton,12.475,E121
+825,Master. Urho Abraham Panula,2.0,Masculino,False,1,4,3ª,3101295,Southampton,39.6875,
+826,Mr. John Flynn,,Masculino,False,0,0,3ª,368323,Queenstown,6.95,
+827,Mr. Len Lam,,Masculino,False,0,0,3ª,1601,Southampton,56.4958,
+828,Master. Andre Mallet,1.0,Masculino,True,2,0,2ª,S.C./PARIS 2079,Cherbourg,37.0042,
+829,Mr. Thomas Joseph McCormack,,Masculino,True,0,0,3ª,367228,Queenstown,7.75,
+830,Mrs. George Nelson Martha Evelyn Stone,62.0,Feminino,True,0,0,1ª,113572,Southampton,80.0,B28
+831,Mrs. Antoni Selini Alexander Yasbeck,15.0,Feminino,True,0,1,3ª,2659,Cherbourg,14.4542,
+832,Master. George Sibley Richards,0.83,Masculino,True,1,1,2ª,29106,Southampton,18.75,
+833,Mr. Amin Saad,,Masculino,False,0,0,3ª,2671,Cherbourg,7.2292,
+834,Mr. Albert Augustsson,23.0,Masculino,False,0,0,3ª,347468,Southampton,7.8542,
+835,Mr. Owen George Allum,18.0,Masculino,False,0,0,3ª,2223,Southampton,8.3,
+836,Miss. Sara Rebecca Compton,39.0,Feminino,True,1,1,1ª,PC 17756,Cherbourg,83.1583,E49
+837,Mr. Jakob Pasic,21.0,Masculino,False,0,0,3ª,315097,Southampton,8.6625,
+838,Mr. Maurice Sirota,,Masculino,False,0,0,3ª,392092,Southampton,8.05,
+839,Mr. Chang Chip,32.0,Masculino,True,0,0,3ª,1601,Southampton,56.4958,
+840,Mr. Pierre Marechal,,Masculino,True,0,0,1ª,11774,Cherbourg,29.7,C47
+841,Mr. Ilmari Rudolf Alhomaki,20.0,Masculino,False,0,0,3ª,SOTON/O2 3101287,Southampton,7.925,
+842,Mr. Thomas Charles Mudd,16.0,Masculino,False,0,0,2ª,S.O./P.P. 3,Southampton,10.5,
+843,Miss. Augusta Serepeca,30.0,Feminino,True,0,0,1ª,113798,Cherbourg,31.0,
+844,Mr. Peter L Lemberopolous,34.5,Masculino,False,0,0,3ª,2683,Cherbourg,6.4375,
+845,Mr. Jeso Culumovic,17.0,Masculino,False,0,0,3ª,315090,Southampton,8.6625,
+846,Mr. Anthony Abbing,42.0,Masculino,False,0,0,3ª,C.A. 5547,Southampton,7.55,
+847,Mr. Douglas Bullen Sage,,Masculino,False,2,8,3ª,CA. 2343,Southampton,69.55,
+848,Mr. Marin Markoff,35.0,Masculino,False,0,0,3ª,349213,Cherbourg,7.8958,
+849,Rev. John Harper,28.0,Masculino,False,1,0,2ª,248727,Southampton,33.0,
+850,Mrs. Samuel L Edwiga Grabowska Goldenberg,,Feminino,True,0,1,1ª,17453,Cherbourg,89.1042,C92
+851,Master. Sigvard Harald Elias Andersson,4.0,Masculino,False,2,4,3ª,347082,Southampton,31.275,
+852,Mr. Johan Svensson,74.0,Masculino,False,0,0,3ª,347060,Southampton,7.775,
+853,Miss. Nourelain Boulos,9.0,Feminino,False,1,1,3ª,2678,Cherbourg,15.2458,
+854,Miss. Mary Conover Lines,16.0,Feminino,True,1,0,1ª,PC 17592,Southampton,39.4,D28
+855,Mrs. Ernest Courtenay Lilian Hughes Carter,44.0,Feminino,False,0,1,2ª,244252,Southampton,26.0,
+856,Mrs. Sam Leah Rosen Aks,18.0,Feminino,True,1,0,3ª,392091,Southampton,9.35,
+857,Mrs. George Dennick Mary Hitchcock Wick,45.0,Feminino,True,1,1,1ª,36928,Southampton,164.8667,
+858,Mr. Peter Denis  Daly,51.0,Masculino,True,0,0,1ª,113055,Southampton,26.55,E17
+859,Mrs. Solomon Latifa Qurban Baclini,24.0,Feminino,True,3,0,3ª,2666,Cherbourg,19.2583,
+860,Mr. Raihed Razi,,Masculino,False,0,0,3ª,2629,Cherbourg,7.2292,
+861,Mr. Claus Peter Hansen,41.0,Masculino,False,0,2,3ª,350026,Southampton,14.1083,
+862,Mr. Frederick Edward Giles,21.0,Masculino,False,0,1,2ª,28134,Southampton,11.5,
+863,Mrs. Frederick Joel Margaret Welles Barron Swift,48.0,Feminino,True,0,0,1ª,17466,Southampton,25.9292,D17
+864,"Miss. Dorothy Edith ""Dolly"" Sage",,Feminino,False,2,8,3ª,CA. 2343,Southampton,69.55,
+865,Mr. John William Gill,24.0,Masculino,False,0,0,2ª,233866,Southampton,13.0,
+866,Mrs. Karolina Bystrom,42.0,Feminino,True,0,0,2ª,236852,Southampton,13.0,
+867,Miss. Asuncion Duran y More,27.0,Feminino,True,0,1,2ª,SC/PARIS 2149,Cherbourg,13.8583,
+868,Mr. Washington Augustus II Roebling,31.0,Masculino,False,0,0,1ª,PC 17590,Southampton,50.4958,A24
+869,Mr. Philemon van Melkebeke,,Masculino,False,0,0,3ª,345777,Southampton,9.5,
+870,Master. Harold Theodor Johnson,4.0,Masculino,True,1,1,3ª,347742,Southampton,11.1333,
+871,Mr. Cerin Balkic,26.0,Masculino,False,0,0,3ª,349248,Southampton,7.8958,
+872,Mrs. Richard Leonard Sallie Monypeny Beckwith,47.0,Feminino,True,1,1,1ª,11751,Southampton,52.5542,D35
+873,Mr. Frans Olof Carlsson,33.0,Masculino,False,0,0,1ª,695,Southampton,5.0,B51 B53 B55
+874,Mr. Victor Vander Cruyssen,47.0,Masculino,False,0,0,3ª,345765,Southampton,9.0,
+875,Mrs. Samuel Hannah Wizosky Abelson,28.0,Feminino,True,0,1,2ª,P/PP 3381,Cherbourg,24.0,
+876,"Miss. Adele Kiamie ""Jane"" Najib",15.0,Feminino,True,0,0,3ª,2667,Cherbourg,7.225,
+877,Mr. Alfred Ossian Gustafsson,20.0,Masculino,False,0,0,3ª,7534,Southampton,9.8458,
+878,Mr. Nedelio Petroff,19.0,Masculino,False,0,0,3ª,349212,Southampton,7.8958,
+879,Mr. Kristo Laleff,,Masculino,False,0,0,3ª,349217,Southampton,7.8958,
+880,Mrs. Thomas Jr Lily Alexenia Wilson Potter,56.0,Feminino,True,1,0,1ª,11767,Cherbourg,83.1583,C50
+881,Mrs. William Imanita Parrish Hall Shelley,25.0,Feminino,True,1,0,2ª,230433,Southampton,26.0,
+882,Mr. Johann Markun,33.0,Masculino,False,0,0,3ª,349257,Southampton,7.8958,
+883,Miss. Gerda Ulrika Dahlberg,22.0,Feminino,False,0,0,3ª,7552,Southampton,10.5167,
+884,Mr. Frederick James Banfield,28.0,Masculino,False,0,0,2ª,C.A./SOTON 34068,Southampton,10.5,
+885,Mr. Henry Jr Sutehall,25.0,Masculino,False,0,0,3ª,SOTON/OQ 392076,Southampton,7.05,
+886,Mrs. William Margaret Norton Rice,39.0,Feminino,False,5,0,3ª,382652,Queenstown,29.125,
+887,Rev. Juozas Montvila,27.0,Masculino,False,0,0,2ª,211536,Southampton,13.0,
+888,Miss. Margaret Edith Graham,19.0,Feminino,True,0,0,1ª,112053,Southampton,30.0,B42
+889,"Miss. Catherine Helen ""Carrie"" Johnston",,Feminino,False,2,1,3ª,W./C. 6607,Southampton,23.45,
+890,Mr. Karl Howell Behr,26.0,Masculino,True,0,0,1ª,111369,Cherbourg,30.0,C148
+891,Mr. Patrick Dooley,32.0,Masculino,False,0,0,3ª,370376,Queenstown,7.75,
