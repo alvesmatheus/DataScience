@@ -3,9 +3,6 @@ import pandas as pd
 pd.options.display.float_format = \
     lambda x : '{:.0f}'.format(x) if round(x,0) == x else '{:,.2f}'.format(x)
 
-def remove_parentheses(full_name):
-    return full_name.replace("(", "").replace(")", "")
-
 def reorder_full_name(full_name):
     modified_name = full_name.split(", ")
     return modified_name[1] + " " + modified_name[0]
@@ -38,16 +35,14 @@ def apply_column_function(dataframe, column_name, function):
     dataframe[column_name] = dataframe[column_name].apply(function)
 
 def main():
-    titanic_data = pd.read_csv("titanic_raw_data.csv")
+    titanic_data = pd.read_csv("../data/titanic_raw_data.csv")
 
     titanic_data.columns = ["ID", "Sobrevivente", "Classe", "Nome", "Sexo", "Idade", "Irmãos e Cônjuges",
                             "Pais e Filhos", "Passagem", "Tarifa", "Cabine", "Local de Embarque"]
 
     titanic_data["Sobrevivente"] = titanic_data["Sobrevivente"].astype(bool)
 
-    apply_column_function(titanic_data, "Nome", remove_parentheses)
     apply_column_function(titanic_data, "Nome", reorder_full_name)
-
     apply_column_function(titanic_data, "Sexo", translate_sex_value)
     apply_column_function(titanic_data, "Classe", translate_pclass_value)
     apply_column_function(titanic_data, "Local de Embarque", translate_embarked_value)
@@ -55,7 +50,7 @@ def main():
     titanic_data = titanic_data[["ID", "Nome", "Idade", "Sexo", "Sobrevivente", "Pais e Filhos", "Irmãos e Cônjuges",
                                 "Classe", "Passagem", "Local de Embarque", "Tarifa", "Cabine"]]
 
-    titanic_data.to_csv("titanic_data.csv", index= False)
+    titanic_data.to_csv("../data/titanic_data.csv", index= False)
 
 
 
