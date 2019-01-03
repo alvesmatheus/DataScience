@@ -1,0 +1,24 @@
+h1 {
+  font-size: 2.5em !important;
+  text-align: center !important;
+  margin-bottom: 0em 0.75em !important;
+}
+
+h2 {
+  font-size: 1.75em !important;
+  padding: 0em 0.5em !important;
+  margin-top:0.5em !important;
+}
+
+p  {
+  text-align: justify !important;
+  text-indent: 2.5em !important;
+  padding: 0em 1em !important;
+
+  line-height: 175% !important;
+  margin-top: 0.4em !important;
+}
+
+.input_area, .output_subarea {
+  margin: 0em 1.5em !important;
+}
