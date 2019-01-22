@@ -1,6 +1,7 @@
 # Environments
 .idea
 .vscode
+.Rproj.user
 
 # Python
 *$py.class
@@ -16,3 +17,15 @@ dist/
 # Jupyter Notebook
 .ipynb_checkpoints
 
+# R
+.RData
+.Rhistory
+.Ruserdata
+.Rapp.history
+
+*.utf8.md
+*.knit.md
+
+/*.Rcheck/
+/*_cache/
+/cache/
