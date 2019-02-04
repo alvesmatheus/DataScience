@@ -1,0 +1,141 @@
+---
+title: "O mais insatisfeito escreve mais?"
+author: "Matheus Alves dos Santos"
+date: "04 de fevereiro de 2019"
+css: ../../stylesheets/r-markdown.css
+output:
+  html_document:
+    toc: true
+    theme: flatly
+    toc_depth: 5
+    toc_float:
+      collapsed: false
+---
+
+Foram selecionadas 60 reclamações sobre o Instituto Nacional do Seguro Social (INSS) e a Agência Nacional de Aviação Civil (ANAC) postadas por usuários do ReclameAqui, sendo metade da amostra relativa a cada uma dessas instituições. Esse processo de amostragem ocorreu no contexto da disciplina de Metodologia Científica, no período 2018.2, do curso de Ciência da Computação da Universidade Federal de Campina Grande (UFCG). Além disso, foi realizado um experimento humano com 38 alunos da referida disciplina sobre o nível de insatisfação da amostra de reclamações.
+
+O experimento humano e o processo de amostragem tiveram sua realização motivada por um projeto de pesquisa que se propôs a analisar a eficácia dos métodos de análise de sentimentos baseados em léxicos na estimativa do nível de insatisfação das reclamações a respeito do Governo Federal. No entanto, as análises aqui apresentadas resultam de uma exploração posterior e mais aprofundada desses dados.
+
+## Preparação do Ambiente
+
+Inicialmente, foram importadas as bibliotecas e os dados a serem utilizados nas análises. Nessa análise exploratória, serão utilizados as bibliotecas **tidyverse** e **ggplot2**. Os dados utilizados estão estruturados da seguinte maneira:
+
+```{r warning = FALSE, message = FALSE, error = FALSE, echo = FALSE}
+library(tidyverse)
+library(ggplot2)
+
+complaints_data <- read_csv("../data/complaints_data.csv")
+evaluations_data <- read_csv("../data/evaluations_data.csv")
+
+theme_set(theme_bw())
+```
+
+```{r warning = FALSE, message = FALSE, error = FALSE}
+names(complaints_data)
+names(evaluations_data)
+```
+
+Sobre as variáveis indicadas acima, tem-se:
+
+* **ID da Reclamação:** Identificador único da reclamação.
+* **Órgão:** Instituição a que se refere a reclamação.
+* **Título:** Título da reclamação.
+* **Texto:** Texto do corpo da reclamação.
+* **Grupo de Avaliação:** Identificador único do grupo de avaliadores da reclamação.
+* **ID do Avaliador:** Identificador único do avaliador.
+* **ID da Reclamação:** Identificador único da reclamação avaliada.
+* **Grau de Insatisfação:** Nível de insatisfação da reclamação indicado pelo avaliador.
+
+## Análises
+
+### 1 — O tamanho da reclamação é influenciado pelo órgão a que se refere?
+
+Há a suposição de que o tamanho dos textos das reclamações está relacionado ao órgão a que são dirigidas. Desse modo, foi criada uma nova coluna para abrigar o número de palavras contidas em cada uma das reclamações. A seguir, foi gerado um *boxplot* agrupando esses valores de acordo com o órgão governamental.
+
+```{r warning =FALSE, message = FALSE, error = FALSE}
+complaints_data$`Total de Palavras` = str_count(complaints_data$`Título`,'\\w{2,}') + str_count(complaints_data$Texto,'\\w{2,}')
+```
+
+```{r warning = FALSE, message = FALSE, error = FALSE}
+complaints_data %>% 
+  group_by(`Órgão`) %>%
+    ggplot(aes(x = `Órgão`, y = `Total de Palavras`, color = `Órgão`)) +
+    geom_boxplot(show.legend = FALSE) +
+    labs(x = "Órgão Governamental", y = "Número de Palavras")
+```
+
+É possível notar que a mediana do número de palavras por reclamação é levemente superior para aquelas referentes à ANAC. Entretanto, é necessário ressaltar que esse órgão apresenta reclamações de tamanho mais homogêneo. Portanto, pode-se considerar que as reclamações da ANAC e do INSS são semelhantes em relação ao número de palavras que contém.
+
+### 2 — Há relação entre o uso de caixa alta e o grau de insatisfação expresso?
+
+O uso de caixa alta é uma das principais formas de demonstrar descontentamento na escrita digital e, por vezes, seu uso se faz presente nas reclamações do ReclameAqui. Inicialmente, foi necessário determinar o grau de insatisfação a ser atribuído a cada uma das reclamações e, para isso, foram utilizadas as observações do experimento humano.
+
+Dadas as avaliações do grau de insatisfação de uma reclamação específica, a mediana desses valores foi utilizada como nível de insatisfação da reclamação. A mediana foi escolhida como métrica por ser pouco influenciada por valores *outliers*. Uma nova coluna foi criada para armazenar essa nova variável.
+
+```{r warning = FALSE, message = FALSE, error = FALSE}
+dissatisfaction_by_id <-
+  evaluations_data %>% 
+    group_by(`ID da Reclamação`) %>%
+      summarise(`Grau de Insatisfação` = median(`Grau de Insatisfação`, na.rm = TRUE))
+
+complaints_data <- inner_join(complaints_data, dissatisfaction_by_id, by = "ID da Reclamação")
+```
+
+A seguir, foi criada uma nova coluna para o número de palavras escritas em caixa alta de cada reclamação e, a partir desses valores, buscou-se compreender o modo como a média do número de palavras em caixa alta se relaciona com o grau de insatisfação das reclamações.
+
+```{r warning = FALSE, message = FALSE, error = FALSE}
+complaints_data$`Palavras em Caixa Alta` = str_count(complaints_data$`Título`,'\\b[A-Z]{2,}\\b') +
+                                           str_count(complaints_data$Texto,'\\b[A-Z]{2,}\\b')
+```
+
+```{r warning = FALSE, message = FALSE, error = FALSE}
+complaints_data %>%
+  group_by(`Grau de Insatisfação`) %>%
+    summarise(`Média de P.C.A.` = mean(`Palavras em Caixa Alta`)) %>%
+      ggplot(aes(x = `Grau de Insatisfação`, y = `Média de P.C.A.`)) +
+      geom_freqpoly(stat = "identity") +
+      labs(x = "Grau de Insatisfação", y = "Média de Palavras em Caixa Alta")
+```
+
+As reclamações com grau de insatisfação máximo destacam-se por possuírem uma média de palavras em caixa alta consideravelmente superior às demais, entretanto, essa métrica se distribui de maneira muito mais homogênea entre os níveis de insatisfação restantes. Assim, ainda que haja uma relação entre essas variáveis, torna-se pouco viável usar a quantidade de palavras em caixa alta para determinar o nível de insatisfação de uma reclamação.
+
+### 3 — O nível de insatisfação influencia no tamanho da reclamação?
+
+Considerando os resultados das análises anteriores, buscou-se encontrar relação entre o tamanho das reclamações e o grau de insatisfação expresso. 
+
+```{r warning = FALSE, message = FALSE, error = FALSE}
+complaints_data %>% 
+  ggplot(aes(x = `Grau de Insatisfação`, y = `Total de Palavras`, color = `Órgão`)) +
+  geom_point() +
+  geom_smooth(method = "auto", se = FALSE, color = "black") +
+  theme(legend.position = "bottom", legend.title = element_blank()) +
+  labs(x = "Grau de Insatisfação", y = "Número de Palavras")
+```
+
+Conforme o *scatterplot* acima, é possível perceber a existência de uma relação entre o tamanho de uma reclamação e o grau de insatisfação expressa por ela. É notável que, considerando as maiores reclamações de cada grau de insatisfação, as reclamações mais insatisfeitas chegam a ter o triplo de palavras das menos insatisfeitas.
+
+```{r warning = FALSE, message = FALSE, error = FALSE}
+cor(complaints_data$`Total de Palavras`, complaints_data$`Grau de Insatisfação`)
+```
+
+A correlação entre esses dois fatores está entre 0.5 e 0.7 e, portanto, é possível afirmar que o tamanho de uma reclamação e seu grau de insatisfação estão positiva e moderadamente relacionados.
+
+### 4 — E as avaliações do experimento humano, como se comportam?
+
+As avaliações obtidas a partir do experimento humano são usadas para determinar o grau de insatisfação das reclamações e, por esse motivo, é importante compreender como se distribuem. Uma vez que já são conhecidas suas medianas, optou-se por utilizar o desvio padrão como variável a ser apresentada no histograma a seguir.
+
+```{r warning = FALSE, message = FALSE, error = FALSE}
+evaluations_data %>% 
+    group_by(`ID da Reclamação`) %>% 
+      summarise(`Desvio Padrão` = sd(`Grau de Insatisfação`, na.rm = TRUE)) %>%
+        ggplot(aes(x = `ID da Reclamação`, y = `Desvio Padrão`, fill = `Desvio Padrão`)) +
+        geom_histogram(stat = "identity") +
+        labs(x = "ID das Reclamações", y = "Desvio Padrão das Avaliações") +
+        scale_fill_gradient(low = "thistle2", high = "magenta4", guide = FALSE)
+```
+
+Percebe-se que o desvio padrão das avaliações é inferior a 1.0 para a maioria das reclamações da amostra, havendo inclusive ocorrências de desvio padrão nulo. No entanto, em 11 das 60 reclamações o valor do desvio padrão supera esse valor. Desse modo, para que os resultados obtidos tornem-se mais confiáveis, seria interessante expandir o número de avaliadores por grupo.
+
+## Conclusões
+
+O tamanho das reclamações não aparenta estar relacionado ao órgão governamental a que se destina, bem como não parece haver relação entre o uso da caixa alta e a insatisfação expressa pelo texto. Entretanto, encontrou-se uma correlação moderada e positiva entre o número de palavras e o grau de insatisfação expresso  pelas reclamações. Dessa forma, ainda que o experimento humano possa ser aprimorado para garantir resultados mais confiáveis, é possível afirmar que os usuários mais insatisfeitos tendem a produzir reclamações mais extensas.
