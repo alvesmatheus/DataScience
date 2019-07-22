@@ -1,0 +1,196 @@
+---
+title: "League of Legends: O impacto do foco nos objetivos."
+author: "Matheus Alves dos Santos"
+date: "05 de julho de 2019"
+output:
+  html_document:
+    theme: flatly
+    code_folding: "hide"
+    df_print: paged
+    toc: yes
+    toc_depth: 5
+    toc_float:
+      collapsed: no
+css: ../../stylesheets/r-markdown.css
+---
+
+O **League of Legends**, muitas vezes referenciado apenas por LOL, é um jogo eletrônico do gênero MOBA (*Multiplayer Online Battle Arena*) desenvolvido pela Riot Games. Em *League of Legends*, os jogadores são divididos em times e, assumindo o papel de invocadores, controlam campeões com habilidades únicas para enfrentar os times adversários. Bem recebido desde seu lançamento em 2009, LOL é o jogo para computador mais popular da atualidade, cujo cenário competitivo é grande o suficiente para entregar premiações milionárias anualmente.
+
+Em seu modo mais popular, o objetivo dos dois times é destruir o *Nexus* da equipe adversária, uma estrutura localizada na base inimiga e protegida por outras estruturas (como inibidores e torres). Ainda que a destruição de um dos *Nexus* determine a vitória, destruir outras estruturas e conquistar os objetivos da selva (como os Dragões, o Arauto do Vale e o Barão Nashor) também garante *gold* e *buffs* aos times.
+
+Em teoria, os objetivos deveriam ser a prioridade máxima dos jogadores, porém, o ímpeto de matar os campeões inimigos pode ser uma distração bem grande, especialmente para os jogadores mais inexperientes. Por isso, decidiu-se investigar o real impacto da priorização dos objetivos no resultado das partidas de *League of Legends*.
+
+## Preparação do Ambiente
+
+Para as análises apresentadas a seguir, foram utilizadas as bibliotecas **broom**, **ggplot2**, **modelr**, **tidyverse** e **pscl**. Os dados utilizados são referentes a 50295 partidas ranqueadas da 9º temporada do *League of Legends* e trazem informações sobre qual dos times conquistou o primeiro de cada um dos objetivos do jogo, além de qual deles foi vitorioso.
+
+Foram removidas as partidas com menos de 5 minutos de duração, pois são encerradas precocemente devido à ociosidade de jogadores desde o início da partida. Os dados estão estruturados da seguinte maneira:
+
+```{r warning = FALSE, message = FALSE, error = FALSE, echo = FALSE}
+library(broom)
+library(ggplot2)
+library(modelr)
+library(tidyverse)
+library(pscl)
+
+knitr::opts_chunk$set(fig.height = 3)
+options(scipen = 999)
+
+theme_set(theme_bw())
+```
+
+```{r warning = FALSE, message = FALSE, error = FALSE}
+ranked_matches <- read_csv(here::here("data/matches_data.csv"))
+
+ranked_matches <- ranked_matches %>%
+  mutate(winner = if_else(winner == 1, "Blue", "Red")) %>%
+  mutate(first_tower = if_else(first_tower == 1, "Blue", "Red")) %>%
+  mutate(first_inhibitor = if_else(first_inhibitor == 1, "Blue", "Red")) %>%
+  mutate(first_baron = case_when(first_baron == 0 ~ "None", first_baron == 1 ~ "Blue", first_baron == 2 ~ "Red")) %>%
+  mutate(first_dragon = case_when(first_dragon == 0 ~ "None", first_dragon == 1 ~ "Blue", first_dragon == 2 ~ "Red")) %>%
+  mutate(rift_herald_kill = case_when(rift_herald_kill == 0 ~ "None", rift_herald_kill == 1 ~ "Blue", rift_herald_kill == 2 ~ "Red"))
+
+ranked_matches <- ranked_matches %>%
+  filter(game_duration > 300) %>%
+  select(winner, first_tower, first_inhibitor, first_baron, first_dragon, rift_herald_kill)
+
+ranked_matches_factor <- ranked_matches %>%
+  mutate(winner = factor(winner, levels = c("Red", "Blue"), ordered = T),
+         first_tower = factor(first_tower),
+         first_inhibitor = factor(first_inhibitor),
+         first_baron = factor(first_baron),
+         first_dragon = factor(first_dragon),
+         rift_herald_kill = factor(rift_herald_kill))
+
+ranked_matches
+```
+
+## Relações entre as Variáveis
+
+Antes de analisar a associação entre o time vitorioso de cada partida e sua capacidade de conquistar os objetivos iniciais do jogo, é necessário avaliar como se dá a associação entre essas variáveis. Nesse sentido, abaixo são apresentados alguns gráficos que permitem visualizar as relações entre as variáveis de interesse.
+
+```{r warning = FALSE, message = FALSE, error = FALSE}
+color_scale_2 <- c("steelblue2", "orangered2")
+
+ranked_matches %>%
+  mutate(first_tower = if_else(first_tower == "Blue", "1ª Torre: Blue Team", "1ª Torre: Red Team")) %>%
+  ggplot(aes(x = winner, y = ..prop.., group = first_tower)) +
+  geom_bar(aes(fill = factor(..x..)), width = .4, show.legend = FALSE) +
+  labs(x = "Vencedor", y = "Frequência Relativa", title = "1ª Torre Destruída") +
+  scale_y_continuous(labels = scales::percent_format(5L)) +
+  scale_fill_manual(values = color_scale_2) +
+  facet_grid(~ first_tower)
+```
+
+```{r warning = FALSE, message = FALSE, error = FALSE}
+ranked_matches %>%
+  mutate(first_inhibitor = if_else(first_inhibitor == "Blue", "1º Inibidor: Blue Team", "1º Inibidor: Red Team")) %>%
+  ggplot(aes(x = winner, y = ..prop.., group = first_inhibitor)) +
+  geom_bar(aes(fill = factor(..x..)), width = .4, show.legend = FALSE) +
+  labs(x = "Vencedor", y = "Frequência Relativa", title = "1º Inibidor Destruído") +
+  scale_y_continuous(labels = scales::percent_format(5L)) +
+  scale_fill_manual(values = color_scale_2) +
+  facet_grid(~ first_inhibitor)
+```
+
+```{r warning = FALSE, message = FALSE, error = FALSE}
+ranked_matches %>%
+  mutate(first_dragon = case_when(first_dragon == "Blue" ~ "1º Dragão: Blue Team",
+                                   first_dragon == "Red" ~ "1º Dragão: Red Team",
+                                   TRUE ~ "1º Dragão: None")) %>%
+  ggplot(aes(x = winner, y = ..prop.., group = first_dragon)) +
+  geom_bar(aes(fill = factor(..x..)), width = .6, show.legend = FALSE) +
+  labs(x = "Vencedor", y = "Frequência Relativa", title = "1º Dragão Morto") +
+  scale_y_continuous(labels = scales::percent_format(5L)) +
+  scale_fill_manual(values = color_scale_2) +
+  facet_grid(~ first_dragon)
+```
+
+```{r warning = FALSE, message = FALSE, error = FALSE}
+ranked_matches %>%
+  mutate(rift_herald_kill = case_when(rift_herald_kill == "Blue" ~ "Arauto do Vale: Blue Team",
+                                   rift_herald_kill == "Red" ~ "Arauto do Vale: Red Team",
+                                   TRUE ~ "Arauto do Vale: None")) %>%
+  ggplot(aes(x = winner, y = ..prop.., group = rift_herald_kill)) +
+  geom_bar(aes(fill = factor(..x..)), width = .6, show.legend = FALSE) +
+  labs(x = "Vencedor", y = "Frequência Relativa", title = "Arauto do Vale Conquistado") +
+  scale_y_continuous(labels = scales::percent_format(5L)) +
+  scale_fill_manual(values = color_scale_2) +
+  facet_grid(~ rift_herald_kill)
+```
+
+```{r warning = FALSE, message = FALSE, error = FALSE}
+ranked_matches %>%
+  mutate(first_baron = case_when(first_baron == "Blue" ~ "1º Barão Nashor: Blue Team",
+                                 first_baron == "Red" ~ "1º Barão Nashor: Red Team",
+                                 TRUE ~ "1º Barão Nashor: None")) %>%
+  ggplot(aes(x = winner, y = ..prop.., group = first_baron)) +
+  geom_bar(aes(fill = factor(..x..)), width = .6, show.legend = FALSE) +
+  labs(x = "Vencedor", y = "Frequência Relativa", title = "1º Barão Nashor Morto") +
+  scale_y_continuous(labels = scales::percent_format(5L)) +
+  scale_fill_manual(values = color_scale_2) +
+  facet_grid(~ first_baron)
+```
+
+## Análises
+
+Conforme os gráficos apresentados acima, o fato de um time sair vitorioso em uma partida ranqueada de *League of Legends* parece estar diretamente associado à sua capacidade de garantir a conquista dos primeiros objetivos do jogo. Essa relação será analisada mais profundamente com auxílio de regressão logística.
+
+Inicialmente, cria-se um modelo linear generalizado que busca predizer qual dos times foi vitorioso baseando-se em qual deles conquistou o primeiro objetivo de cada tipo. A seguir, estão apresentadas algumas estatísticas encontradas para esse modelo.
+
+```{r warning = FALSE, message = FALSE, error = FALSE}
+matches_glm <- glm(winner ~ first_tower + first_inhibitor + first_dragon + rift_herald_kill + first_baron, 
+          data = ranked_matches_factor,family = "binomial")
+
+coefficients <- tidy(matches_glm, conf.int = TRUE) %>%
+  select(-statistic, -p.value)
+
+coefficients
+```
+
+O modelo obtido está de acordo com a percepção de que conquistar os primeiros objetivos do jogo tem um impacto importante na definição de qual dos times será o vencedor da partida. Dos valores estimados, é possível gerar algumas considerações que serão simplificadas através da regra do “dividido por 4”. Essa regra indica que, ao dividir o valor de  estimate por 4, encontra-se uma aproximação da diferença máxima na probabilidade analisada que uma unidade da variável independente causa. $^1$
+
+```{r warning = FALSE, message = FALSE, error = FALSE}
+coefficients %>%
+  mutate(`divided by 4 rule` = round((estimate / 4), 4)) %>%
+  select(term, `divided by 4 rule`)
+```
+
+Considerando os valores calculados acima, sumariza-se as conclusões obtidas abaixo:
+
+| | | Objetivo | Quem conquistou? |  Impacto nas chances de vitória do Blue Team |
+| :--: | :--: | :--: | :--: | :--: |
+| | | Arauto do Vale | Nenhum | **- 4,84%** |
+| | | Arauto do Vale | *Red Team* | **- 11,21%** |
+| | | 1º Barão Nashor | Nenhum | **- 8,43%** |
+| | | 1º Barão Nashor | *Red Team* | **- 52,26%** |
+| | | 1º Dragão | Nenhum | **+ 4,56%** |
+| | | 1º Dragão | *Red Team* | **- 22,88%** |
+| | | 1º Inibidor | *Red Team* | **- 86,77%** |
+| | | 1ª Torre | *Red Team* | **- 25,40%** |
+
+```{r warning = FALSE, message = FALSE, error = FALSE}
+tibble(statistic = c("Pseudo-R² de McFadden", "Pseudo-R² de Máxima Verossimilhança"),
+       value = c(pR2(matches_glm)[4], pR2(matches_glm)[5]))
+```
+  
+Além disso, através de estatísticas como o Pseudo-R² de McFadden e o Pseudo-R² de Máxima Verossimilhança cujos valores estão apresentados acima, é possível afirmar que o modelo criado explica cerca de 54% das vitórias em partidas ranqueadas de *League of Legends* com base na conquista dos primeiros objetivos do jogo. Esse percentual é considerável, porém precisa de maiores refinamentos para tornar-se realmente adequado.
+
+Através das variáveis independentes analisadas, é perceptível que o Barão *Nashor* e os inibidores são os objetivos com maior impacto sobre o resultado das partidas. Por fim, busca-se utilizar o modelo criado para prever os resultados das partidas cujos dados foram utilizados para as análises apresentadas.
+
+```{r}
+predictions <- matches_glm %>% 
+  augment(type.predict = "response") %>% 
+  mutate(predicted = .fitted > .5,  real = (winner == "Blue"))
+
+predictions %>%
+  mutate(matched = (predicted == real)) %>%
+  group_by(matched) %>%
+  summarise(occurrences = n(), percentage = (occurrences / NROW(predictions)))
+```
+
+Percebe-se que o modelo criado foi muito bem sucedido para a amostra em questão, prevendo corretamente os resultados de 87,45% das partidas.
+
+## Referências
+
+$^1$ Andrew Gelman and Jennifer Hill. 2006. *Data analysis using regression and multilevel/hierarchical models*. Cambridge University Press.
