@@ -1,0 +1,157 @@
+---
+title: "Desempenho dos Centros de Ensino da UFCG no ENADE"
+author: "Matheus Alves dos Santos"
+date: "30 de abril de 2019"
+output: 
+  flexdashboard::flex_dashboard:
+    storyboard: true
+    theme: flatly
+css: ../../stylesheets/flex-dashboard.css
+---
+
+
+```{r warning = FALSE, message = FALSE, error = FALSE, echo = FALSE}
+library(flexdashboard)
+library(ggbeeswarm)
+library(tidyverse)
+library(ggplot2)
+library(plotly)
+
+enade_data <- read_csv(here::here("data/enade-ufcg-2017.csv"))
+ufcg_data <- read_csv(here::here("data/cursos-ufcg-por-centro.csv"))
+
+options(scipen = 999)
+theme_set(theme_bw())
+```
+
+```{r warning = FALSE, message = FALSE, error = FALSE, echo = FALSE}
+ufcg_data <- ufcg_data %>% select("e-MEC", "Centro")
+enade_data <- enade_data %>% left_join(ufcg_data, by = "e-MEC")
+
+enade_data <- enade_data %>%
+    mutate(categoria = case_when(categoria == "Aprendizagem além do técnico" ~ "Aprendizagem Não-Técnica",
+                            categoria == "Curso em geral" ~ "Curso em Geral",
+                            categoria == "Ensino, apoio e avaliacão" ~ "Ensino, Apoio e Avaliação",
+                            TRUE ~ "Infraestrutura"))
+
+enade_data <- enade_data %>%
+    select("Curso", "Tipo", "Centro", "e-MEC", "categoria", "tema", "media")
+```
+
+### O que o ENADE diz sobre os centros da UFCG? {data-commentary-width=400}
+
+```{r warning = FALSE, message = FALSE, error = FALSE}
+mean_by_center <- enade_data %>%
+    filter(categoria != "Outros") %>%
+    group_by(Centro) %>%
+    summarise(media = mean(media))
+
+mean_by_center_plot <- enade_data %>%
+    filter(categoria != "Outros") %>%
+    ggplot(aes(x = reorder(Centro, media), y = media)) +
+    geom_jitter(aes(text = paste("Curso:", Curso, "<br>Tema:", tema, "<br>Média:", round(media, 2))),
+                width = .15, alpha = .4, color = 'snow3') +
+    stat_summary(geom = 'line', fun.y = 'mean', color = 'gray35', aes(group = 1)) +
+    geom_point(data = mean_by_center, aes(text = paste("Centro:", Centro, "<br>Média:", round(media, 2))),
+               size = 4, shape = 21, color = 'gray35', fill = 'dodgerblue4') +
+    labs(title = "Avaliações do ENADE para os centros da UFCG",
+         x = "Centros da UFCG",
+         y = "Avaliações do ENADE (1 a 6)")
+
+ggplotly(mean_by_center_plot, tooltip = c("text"))
+```
+
+***
+
+A **Universidade Federal de Campina Grande (UFCG)** é constituída por 11 Centros de Ensino divididos entre os sete *campi* que estão distribuídos pelo estado da Paraíba. São eles:
+
+- **CCBS –** Centro de Ciências Biológicas e da Saúde
+- **CCT –** Centro de Ciências e Tecnologia
+- **CEEI –** Centro de Engenharia Elétrica e Informática
+- **CH –** Centro de Humanidades
+- **CTRN –** Centro de Tecnologia e Recursos Naturais
+- **CCTA –** Centro de Ciências e Tecnologia Agroalimentar
+- **CSTR –** Centro de Saúde e Tecnologia Rural
+- **CCJS –** Centro de Ciências Jurídicas e Sociais
+- **CFP –** Centro de Formação de Professores
+- **CES –** Centro de Educação e Saúde
+- **CDSA –** Centro de Desenvolvimento do Semiárido
+
+Em 2017, cursos de 10 destes centros foram submetidos ao **Exame Nacional de Desempenho de Estudantes (ENADE)** e, com base nos dados coletados por ele, realizou-se uma análise comparativa dos resultados. No *scatterplot* ao lado, os pontos cinzas representam as médias obtidas por cada curso avaliado (agrupados por centro) em relação aos temas sobre os quais os alunos foram questionados. Já os pontos azulados representam as médias de cada Centro de Ensino quando avaliados a respeito de todas as perguntas do ENADE.
+
+As médias obtidas pelo CES (*campus* Cuité) e pelo CCT (*campus* Campina Grande) diferem por quase um ponto (na escala de 1 a 6), revelando uma sensível diferença entre o modo como os estudantes desses centros percebem os seus cursos. Ainda, a dispersão dos pontos mostra que todos os centros tem avaliações muito distintas conforme o tema da avaliação.
+
+Por fim, é possível perceber que os Centros de Ensino cujos cursos são de Ciências Exatas recebem avaliações consideravelmente inferiores àqueles cujos cursos são de Ciências Biológicas ou Ciências Humanas.
+	
+
+### Em quê os centros da UFCG são tão diferentes? {data-commentary-width=400}
+
+```{r warning = FALSE, message = FALSE, error = FALSE}
+mean_by_category <- enade_data %>%
+    filter(categoria != "Outros") %>%
+    group_by(Centro, categoria) %>%
+    summarise(media = mean(media))
+
+mean_by_category_plot <- enade_data %>%
+    filter(categoria != "Outros") %>%
+    ggplot(aes(x = reorder(Centro, media), y = media)) +
+    geom_jitter(aes(text = paste("Curso:", Curso, "<br>Tema:", tema, "<br>Média:", round(media, 2))),
+                width = .15, alpha = .4, color = 'snow3') +
+    stat_summary(geom = 'line', fun.y = 'mean', color = 'gray35', aes(group = 1)) +
+    geom_point(data = mean_by_category, aes(text = paste("Centro:", Centro, "<br>Categoria:", categoria, "<br>Média:", round(media, 2))),
+               size = 4, shape = 21, color = 'gray35', fill = 'dodgerblue4') +
+    labs(title = "Avaliações do ENADE para os centros da UFCG (por categoria)",
+         x = "", 
+         y = "Avaliações do ENADE (1 a 6)") +
+    facet_wrap(~ categoria)
+
+ggplotly(mean_by_category_plot, tooltip = c("text"))
+```
+
+***
+
+Para uma análise mais detalhada, as perguntas do ENADE foram classificadas nas seguintes categorias:
+
+- Aprendizagem Não-Técnica
+- Curso em Geral
+- Ensino, Apoio e Avaliação
+- Infraestrutura
+- Outros
+
+Todas as perguntas pertencentes à categoria "Outros" foram descartadas devido à sua não-coerência com a realidade de todos os cursos avaliados. Os resultados apresentados seguem as mesmas representações e agrupamentos descritos anteriormente, porém, desta vez estão separados conforme a categorização adotada.
+
+Utilizando a nova separação dos resultados, as diferenças entre os Centros de Ensino tornaram-se mais acentuadas para Infraestrutura, porém, mais amenas nas demais categorias. Esse fato pode estar relacionado à diferença de "idade" entre os *campi* e, consequentemente, de sua infraestrutura. Também surgiram algumas diferenças no *ranking* das médias dos Centros, como o CEEI sendo o 2º melhor avaliado em relação ao Curso em Geral e o pior avaliado em relação à Aprendizagem Não-Técnica, mantendo-se entre os últimos colocados para as demais categorias.
+
+Observando as avaliações por categoria, é possível perceber que a Infraestrutura é aquela com avaliações mais baixas, mas também, aquela em que mais se acentua a diferença entre os centros que foram melhor e pior avaliados.
+
+### Bacharelado e Licenciatura, quais cursos são melhor avaliados? {data-commentary-width=400}
+
+```{r warning = FALSE, message = FALSE, error = FALSE}
+mean_by_type <- enade_data %>%
+    filter(categoria != "Outros") %>%
+    group_by(Tipo, categoria) %>%
+    summarise(media = mean(media))
+
+mean_by_type_plot <- enade_data %>%
+    filter(categoria != "Outros") %>%
+    ggplot(aes(x = reorder(Tipo, media), y = media)) +
+    geom_quasirandom(aes(text = paste("Curso:", Curso, "<br>Tema:", tema, "<br>Média:", round(media, 2))),
+                     width = .3, alpha = .4, color = 'snow3') +
+    stat_summary(geom = 'line', fun.y = 'mean', color = 'gray35', aes(group = 1)) +
+    geom_point(data = mean_by_type, aes(text = paste("Tipo:", Tipo, "<br>Média:", round(media, 2))),
+               size = 4, shape = 21, color = 'gray35', fill = 'dodgerblue4') +
+    labs(title = "Avaliações do ENADE para cursos de Bacharelado e Licenciatura", 
+         x = "", 
+         y = "Avaliações do ENADE (1 a 6)") +
+    facet_wrap(~ categoria)
+
+ggplotly(mean_by_type_plot, tooltip = c("text"))
+```
+
+***
+
+Por fim, decidiu-se agrupar as avaliações geradas por cursos de Bacharelado e de Licenciatura, mantendo a separação por categorias. Essa abordagem foi adotada supondo que o tipo de graduação pode estar relacionado à percepção que os alunos tem de seus cursos.
+
+Os cursos de Licenciatura tiveram médias superiores aos cursos de Bacharelado em todas as categorias, o que contribui para a suposição inicial. Também é possível perceber que a dispersão entre os pontos varia de maneira similar, conforme a categoria avaliada, seja para Licenciatura ou Bacharelado.
+
+A diferença entre as médias dos cursos de Bacharelado e de Licenciatura se ameniza em relação ao Curso em Geral, mas se mantém aproximadamente constante para as demais categorias. Por fim, é interessante notar que as piores avaliações dos cursos de Bacharelado são sempre referentes a cursos de engenharia.
