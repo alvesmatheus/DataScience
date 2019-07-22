@@ -1,0 +1,100 @@
+---
+title: "Hathaway, de Genovia a Gotham."
+author: "Matheus Alves dos Santos"
+date: "11 de maio de 2019"
+output:
+  html_document:
+    theme: flatly
+    code_folding: "hide"
+    df_print: paged
+    toc: yes
+    toc_depth: 5
+    toc_float:
+      collapsed: no
+css: ../../stylesheets/r-markdown.css
+---
+
+**Anne Jacqueline Hathaway** é uma atriz nova-iorquina cujo marcante histórico de atuação já conta com participação em 34 filmes, muitos dos quais são aclamados pela crítica e/ou sucessos de bilheteria. A jovem do *Brooklyn* iniciou sua carreira como atriz da Disney, em *The Princess Diaries*, e manteve-se restrita aos filmes *family-friendly* por bastante tempo. No entanto, sair dessa zona de conforto permitiu que ela alcançasse patamares muito mais elevados como *The Devil Wears Prada*, *The Dark Knight Rises* e *Interstellar*. Devido à sua poderosa atuação, essa atriz costuma estar sob os holofotes dos filmes em que atua, sendo ou não a protagonista da estória. Ao mesmo tempo, as opiniões do público sobre ela divergem bastante, um típico caso de *"ame-a ou odeie-a"*. 
+
+```{r warning = FALSE, message = FALSE, error = FALSE}
+library(tidyverse)
+library(cluster)
+library(ggpubr)
+library(plotly)
+library(broom)
+library(here)
+
+movies_data <- read_csv(here::here("data/anne_hathaway.csv"))
+
+knitr::opts_chunk$set(tidy = FALSE, fig.width = 8, fig.height = 6, echo = TRUE)
+theme_set(theme_bw())
+set.seed(50)
+```
+
+Ativista pelos direitos LGBT+ e envolvida em diversas causas sociais, Anne e sua sólida carreira serão analisadas a seguir. Para isto, serão utilizados os dados do *Rotten Tomatoes* sobre seus filmes cujas informações sobre bilheteria e avaliação já estavam disponíveis no site (exceto animações que dublou). Essas duas informações foram utilizadas para definir 5 grupos de filmes, dos quais 2 foram unidos (por escolha do autor) devido à semelhança entre os filmes neles contidos.
+
+```{r warning = FALSE, message = FALSE, error = FALSE}
+movies_data <- movies_data %>%
+    mutate(rating_scaled = as.vector(scale(rating)),
+           box_office_log_scaled = as.vector(scale(log10(box_office))))
+    
+n_clusters = 5
+
+grouped_by_km <- movies_data %>% 
+    select(box_office_log_scaled, rating_scaled) %>% 
+    kmeans(centers = n_clusters, nstart = 20)  %>% 
+    augment(movies_data)
+
+grouped_by_km <- grouped_by_km %>%
+    mutate(group = case_when(
+        .cluster == 1 ~ "Versátil e Aclamada",
+        .cluster == 2 ~ "Roteiros Reusados",
+        .cluster == 3 | .cluster ==  4 ~ "Sessão da Tarde",
+        .cluster == 5 ~ "Ícones Injustiçados",
+        TRUE ~ "Outros")
+    )
+
+grouped_movies_plot <- grouped_by_km %>%
+    ggplot(aes(x = box_office, y = rating, fill = group))  +
+    stat_chull(aes(color = group, fill = group, text = paste("<b>Grupo:</b>", group)), alpha = 0.3, geom = 'polygon') +
+    geom_point(aes(text = paste("<b>Filme:</b>", title, "<br><b>Bilheteria:</b> US$", round(box_office, 1),
+                                "mi<br><b>Avaliação (RT):</b>", rating, "<br><b>Ano:</b>", year)),
+               size = 4, shape = 21, color = 'gray25') +
+    labs(title = "Anne Hathaway, críticas e arrecadações.",
+         x = "Bilheteria (em milhões de dólares)", y = "Avaliação (<i>Rotten Tomatoe</i>s)") +
+    theme(legend.position = 'none', plot.title = element_text(hjust = 0.5))
+
+ggplotly(grouped_movies_plot, tooltip = c('text'))
+```
+
+## Análises por Agrupamento
+
+### Roteiros Reusados
+
+- **Filmes:** *The Princess Diaries 2 - Royal Engagement* (2004), *Bride Wars* (2009), *Valentine's Day* (2010) e *Alice Through the Looking Glass* (2016).
+
+Todos vivem altos e baixos, certo? Estes são os baixos de Anne Hathaway. Mesmo com renomados atores e atrizes envolvidos e arrecadações relativamente altas, essas produções são absolutamente esquecíveis. Dentre elas, é possível identificar dois subgrupos: as **sequências desnecessárias** e as **comédias românticas ruins**. Em ambos, o insucesso parece estar relacionado ao roteiro, não à capacidade de atuação.
+
+As sequências desnecessárias (**The Princess Diaries 2 - Royal Engagement** e **Alice Through the Looking Glass**) são aquelas que foram criadas na tentativa de reproduzir o desempenho de seus antecessores. Seu insucesso perante a crítica era quase prevísivel, afinal, os filmes anteriores tem desfecho autocontido, fazendo com que essas sequências reaproveitem personagens para criar uma história que não convence o público e parece um mero "esticado" do roteiro original. Enquanto isso, as comédias românticas ruins (**Bride Wars** e **Valentine's Day**) dispensam tantas explicações: o gênero em si traz pouca inovação, de modo que todo filme parece "mais do mesmo". Isso não necessariamente é ruim para a crítica, mas quando todo o *plot* poderia ter sido resolvido por uma conversa civilizada entre duas noivas que são amigas de infância, as avaliações despencam.
+
+### Sessão da Tarde
+
+- **Filmes:** *The Princess Diaries* (2001), *Ella Enchanted* (2004), *Becoming Jane* (2007), *Get Smart* (2008), *Alice in Wonderland* (2010), *Love and Other Drugs* (2010), *One Day* (2011) e *The Intern* (2015).
+
+Esse é o maior grupo de filmes gerado e representa muito bem a 1ª década da filmografia de Anne Hathaway. Todos eles já foram transmitidos algumas dezenas de vezes na Sessão da Tarde da Rede Globo ou em equivalentes de outros canais (sejam ou não da televisão aberta) e são exemplos bem consistentes da fase *family-friendly* da atriz, o que também explica o modo como esse grupo atinge resultados médios tanto em arrecadação quanto em bilheteria.
+
+É possível observar o surgimento de uma jovem e inocente Anne Hathaway vivendo a princesa de Genovia em **The Princess Diaries** e como essa fase declinou gradativamente com o amadurecimento da atriz, encerrando-se em **Alice in Wonderland**, onde ela vive a *White Queen*, uma personagem também de fantasia e da realeza, mas com muito mais personalidade e nuances. Há uma visível mudança no espectro de filmes em que Anne atuou a partir daí. Ainda que sejam filmes para assistir com a família, **Love and Other Drugs** e **One Day** são romances com mais carga dramática e muito mais maduros.
+
+### Ícones Injustiçados
+
+- **Filmes:** *Nicholas Nickleby* (2002), *Rachel Getting Married* (2008) e *Colossal* (2017).
+
+Com uma recepção tão positiva da crítica, é simplesmente injusto que esses filmes tenham sido vistos por tão poucas pessoas e, consequentemente, alcançado valores tão baixos de bilheteria. Em **Rachel Getting Married**, Anne protagoniza pela primeira vez uma história de drama, entregando uma atuação perfeitamente adequada à personagem Kym, cujos conflitos pessoais e familiares são retratados durante o filme. Já em **Colossal**, o único dos filmes desse grupo fora da época *family-friendly* da atriz, Anne mostra outra de suas faces: a da comédia Sci-Fi. Esse é um gênero raramente bem avaliado, mas a mistura de monstros gigantes, problemas pessoais e um senso de humor duvidoso se saiu muito bem. 
+
+### Versátil e Aclamada
+
+- **Filmes:** *Brokeback Mountain* (2005), *The Devil Wears Prada* (2006), *Les Misérables* (2012), *The Dark Knight Rises* (2012) e *Interstellar* (2014).
+
+Enfim, aos melhores! Esse agrupamento apresenta Anne Hathaway nos melhores momentos de sua carreira. É interessante notar como esses filmes são de gêneros e contextos tão distintos e, mesmo assim, a atriz usa de toda sua versatilidade para entregar performances incríveis em obras que já se tornaram novos clássicos do cinema. 
+
+Entre avaliações muito positivas e arrecadações enormes, Anne vive uma funcionária da Runway e atua em pé de igualdade com a lendária Meryl Streep (em **The Devil Wears Prada**), uma obstinada cientista que vira astronauta na tentativa de salvar a humanidade (em **Interstellar**) e, até mesmo, uma icônica Mulher-Gato (em **The Dark Knight Rises**). Apesar de ser a protagonista de apenas um desses filmes, a atriz destacou-se e teve seu desempenho elogiado em todos eles. Em resumo, esses 5 filmes são a escolha perfeita se você deseja conhecer o quão incrível é Anne Hathaway atuando!
