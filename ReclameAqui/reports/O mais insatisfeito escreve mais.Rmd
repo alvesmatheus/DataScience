@@ -2,14 +2,16 @@
 title: "O mais insatisfeito escreve mais?"
 author: "Matheus Alves dos Santos"
 date: "04 de fevereiro de 2019"
-css: ../../stylesheets/r-markdown.css
 output:
   html_document:
-    toc: true
     theme: flatly
+    code_folding: "hide"
+    df_print: paged
+    toc: yes
     toc_depth: 5
     toc_float:
-      collapsed: false
+      collapsed: no
+css: ../../stylesheets/r-markdown.css
 ---
 
 Foram selecionadas 60 reclamações sobre o Instituto Nacional do Seguro Social (INSS) e a Agência Nacional de Aviação Civil (ANAC) postadas por usuários do ReclameAqui, sendo metade da amostra relativa a cada uma dessas instituições. Esse processo de amostragem ocorreu no contexto da disciplina de Metodologia Científica, no período 2018.2, do curso de Ciência da Computação da Universidade Federal de Campina Grande (UFCG). Além disso, foi realizado um experimento humano com 38 alunos da referida disciplina sobre o nível de insatisfação da amostra de reclamações.
@@ -24,8 +26,8 @@ Inicialmente, foram importadas as bibliotecas e os dados a serem utilizados nas 
 library(tidyverse)
 library(ggplot2)
 
-complaints_data <- read_csv("../data/complaints_data.csv")
-evaluations_data <- read_csv("../data/evaluations_data.csv")
+complaints_data <- read_csv(here::here("data/complaints_data.csv"))
+evaluations_data <- read_csv(here::here("data/evaluations_data.csv"))
 
 theme_set(theme_bw())
 ```
@@ -54,9 +56,7 @@ Há a suposição de que o tamanho dos textos das reclamações está relacionad
 
 ```{r warning =FALSE, message = FALSE, error = FALSE}
 complaints_data$`Total de Palavras` = str_count(complaints_data$`Título`,'\\w{2,}') + str_count(complaints_data$Texto,'\\w{2,}')
-```
 
-```{r warning = FALSE, message = FALSE, error = FALSE}
 complaints_data %>% 
   group_by(`Órgão`) %>%
     ggplot(aes(x = `Órgão`, y = `Total de Palavras`, color = `Órgão`)) +
@@ -79,16 +79,10 @@ dissatisfaction_by_id <-
       summarise(`Grau de Insatisfação` = median(`Grau de Insatisfação`, na.rm = TRUE))
 
 complaints_data <- inner_join(complaints_data, dissatisfaction_by_id, by = "ID da Reclamação")
-```
 
-A seguir, foi criada uma nova coluna para o número de palavras escritas em caixa alta de cada reclamação e, a partir desses valores, buscou-se compreender o modo como a média do número de palavras em caixa alta se relaciona com o grau de insatisfação das reclamações.
-
-```{r warning = FALSE, message = FALSE, error = FALSE}
 complaints_data$`Palavras em Caixa Alta` = str_count(complaints_data$`Título`,'\\b[A-Z]{2,}\\b') +
                                            str_count(complaints_data$Texto,'\\b[A-Z]{2,}\\b')
-```
 
-```{r warning = FALSE, message = FALSE, error = FALSE}
 complaints_data %>%
   group_by(`Grau de Insatisfação`) %>%
     summarise(`Média de P.C.A.` = mean(`Palavras em Caixa Alta`)) %>%
@@ -96,6 +90,8 @@ complaints_data %>%
       geom_freqpoly(stat = "identity") +
       labs(x = "Grau de Insatisfação", y = "Média de Palavras em Caixa Alta")
 ```
+
+A seguir, foi criada uma nova coluna para o número de palavras escritas em caixa alta de cada reclamação e, a partir desses valores, buscou-se compreender o modo como a média do número de palavras em caixa alta se relaciona com o grau de insatisfação das reclamações.
 
 As reclamações com grau de insatisfação máximo destacam-se por possuírem uma média de palavras em caixa alta consideravelmente superior às demais, entretanto, essa métrica se distribui de maneira muito mais homogênea entre os níveis de insatisfação restantes. Assim, ainda que haja uma relação entre essas variáveis, torna-se pouco viável usar a quantidade de palavras em caixa alta para determinar o nível de insatisfação de uma reclamação.
 
