@@ -1,0 +1,221 @@
+---
+title: "Parlamentares e o Engajamento Gerado no Twitter"
+author: "Matheus Alves dos Santos"
+date: "25 de junho de 2019"
+output:
+  html_document:
+    theme: flatly
+    code_folding: "hide"
+    df_print: paged
+    toc: yes
+    toc_depth: 5
+    toc_float:
+      collapsed: no
+css: ../../stylesheets/r-markdown.css
+---
+
+Na maioria dos países democráticos, os parlamentares costumam adotar perfis em redes sociais como canais de comunicação não-oficiais, através dos quais podem não somente divulgar sua atuação política, mas também comentar assuntos cotidianos e entrar em contato direto com a população em geral.
+
+O Twitter tem atraído bastante a atenção dos brasileiros nos últimos meses e, muitas vezes, isso não se deve às suas funcionalidades, mas às polêmicas geradas a partir de postagens de figuras políticas do país. Nesse sentido, decidiu-se explorar os dados de nossos parlamentares *twitteiros* na tentativa de compreender os fatores que geram tamanho engajamento do público.
+
+## Preparação do Ambiente
+
+Para as análises apresentadas a seguir, foram utilizadas as bibliotecas **tidyverse**, **ggplot2**, **ggbeeswarm**, **gridExtra**, **modelr** e **broom**. Já os dados utilizados estão estruturados da seguinte maneira:
+
+```{r warning = FALSE, message = FALSE, error = FALSE, echo = FALSE}
+library(broom)
+library(ggbeeswarm)
+library(ggplot2)
+library(gridExtra)
+library(modelr)
+library(tidyverse)
+
+options(scipen = 999)
+
+theme_set(theme_bw())
+```
+
+```{r warning = FALSE, message = FALSE, error = FALSE}
+congress_tt_data <- read_csv(here::here("data/twitter-activity-20190322.csv"))
+
+congress_tt_data <- congress_tt_data %>% 
+  na.omit(.) %>%
+  filter(partido != "S/ Partido") %>%
+  filter(seguidores > 0, n_proprio > 0, n_retweet > 0)  %>%
+  filter(engaj_total > 0, engaj_mediano > 0)
+
+congress_tt_data <- congress_tt_data %>% 
+  mutate(casa = if_else(casa == "senado", "Senado", "Câmara"))
+
+congress_tt_data
+```
+
+## Relações entre Variáveis
+
+Antes de analisar a associação entre as características da atuação dos parlamentares no Twitter e o engajamento (total e mediano) por eles gerado, é necessário avaliar a existência de relações lineares. Como será utilizada a regressão linear múltipla, pode ser necessário transformar algumas das variáveis para que exista esse tipo de relação.
+
+Nesse sentido, abaixo são exibidos alguns gráficos que permitem visualizar as relações entre as variáveis independentes e a variável dependente, estejam elas em seu formato original ou transformado.
+
+### Casa do Congresso
+
+```{r warning = FALSE, message = FALSE, error = FALSE}
+total_engag_house <- congress_tt_data %>% 
+  ggplot(aes(x = casa, y = engaj_total)) + 
+  geom_quasirandom(size = 2, alpha = .7, color = "skyblue4") +
+  labs(x = "Casa do Congresso", y = "Engajamento total (em log10)") +
+  scale_y_log10()
+
+median_engag_house <- congress_tt_data %>% 
+  ggplot(aes(x = casa, y = engaj_mediano)) + 
+  geom_quasirandom(size = 2, alpha = .7, color = "skyblue4") +
+  labs(x = "Casa do Congresso", y = "Engajamento mediano (em log10)") +
+  scale_y_log10()
+
+grid.arrange(total_engag_house, median_engag_house, ncol = 1)
+```
+
+### Número de Perfis Seguidos
+
+```{r warning = FALSE, message = FALSE, error = FALSE, fig.height = 7.5, fig.width = 7}
+total_engag_following <- congress_tt_data %>% 
+  ggplot(aes(x = segue, y = engaj_total)) + 
+  geom_point(size = 2, alpha = .7, color = "skyblue4") +
+  labs(x = "Número de perfis seguidos (em log10)", y = "Engajamento total (em log10)") +
+  scale_x_log10() +
+  scale_y_log10()
+
+median_engag_following <- congress_tt_data %>% 
+  ggplot(aes(x = segue, y = engaj_mediano)) + 
+  geom_point(size = 2, alpha = .7, color = "skyblue4") +
+  labs(x = "Número de perfis seguidos (em log10)", y = "Engajamento mediano (em log10)") +
+  scale_x_log10() +
+  scale_y_log10()
+
+grid.arrange(total_engag_following, median_engag_following, ncol = 1)
+```
+
+### Número de Seguidores
+
+```{r warning = FALSE, message = FALSE, error = FALSE, fig.height = 7.5, fig.width = 7}
+total_engag_followers <- congress_tt_data %>% 
+  ggplot(aes(x = seguidores, y = engaj_total)) + 
+  geom_point(size = 2, alpha = .7, color = "skyblue4") +
+  labs(x = "Número de seguidores (em log10)", y = "Engajamento total (em log10)") +
+  scale_x_log10() +
+  scale_y_log10()
+
+median_engag_followers <- congress_tt_data %>% 
+  ggplot(aes(x = seguidores, y = engaj_mediano)) + 
+  geom_point(size = 2, alpha = .7, color = "skyblue4") +
+  labs(x = "Número de seguidores (em log10)", y = "Engajamento mediano (em log10)") +
+  scale_x_log10() +
+  scale_y_log10()
+
+grid.arrange(total_engag_followers, median_engag_followers, ncol = 1)
+```
+
+### Número de *Tweets*
+
+```{r warning = FALSE, message = FALSE, error = FALSE, fig.height = 7.5, fig.width = 7}
+total_engag_tweets <- congress_tt_data %>% 
+  ggplot(aes(x = n_proprio, y = engaj_total)) + 
+  geom_point(size = 2, alpha = .7, color = "skyblue4") +
+  labs(x = "Número de tweets (em log10)", y = "Engajamento total (em log10)") +
+  scale_x_log10() +
+  scale_y_log10()
+
+median_engag_tweets <- congress_tt_data %>% 
+  ggplot(aes(x = n_proprio, y = engaj_mediano)) + 
+  geom_point(size = 2, alpha = .7, color = "skyblue4") +
+  labs(x = "Número de tweets (em log10)", y = "Engajamento mediano (em log10)") +
+  scale_x_log10() +
+  scale_y_log10()
+
+grid.arrange(total_engag_tweets, median_engag_tweets, ncol = 1)
+```
+
+### Número de *Retweets*
+
+```{r warning = FALSE, message = FALSE, error = FALSE, fig.height = 7.5, fig.width = 7}
+total_engag_retweets <- congress_tt_data %>% 
+  ggplot(aes(x = n_retweet, y = engaj_total)) + 
+  geom_point(size = 2, alpha = .7, color = "skyblue4") +
+  labs(x = "Número de retweets (em log10)", y = "Engajamento total (em log10)") +
+  scale_x_log10() +
+  scale_y_log10()
+
+median_engag_retweets <- congress_tt_data %>% 
+  ggplot(aes(x = n_retweet, y = engaj_mediano)) + 
+  geom_point(size = 2, alpha = .7, color = "skyblue4") +
+  labs(x = "Número de retweets (em log10)", y = "Engajamento mediano (em log10)") +
+  scale_x_log10() +
+  scale_y_log10()
+
+grid.arrange(total_engag_retweets, median_engag_retweets, ncol = 1)
+```
+
+## Análises
+
+É perceptível que, em todos os casos, foi necessário realizar transformações com base em escalas logarítmicas para que existissem relações lineares entre as variáveis dependentes e as independentes estudadas. No entanto, essa necessidade não chega a ser surpreendente, visto que são raros os casos em que variáveis do mundo real se relacionam de maneira linear. A seguir, estão apresentadas as análises de interesse com base em regressão linear múltipla utilizando as variáveis já transformadas.
+
+```{r warning = FALSE, message = FALSE, error = FALSE, fig.height = 7.5, fig.width = 7}
+congress_tt_data <- congress_tt_data %>% 
+  mutate(segue_log = log10(segue),
+         seguidores_log = log10(seguidores), 
+         n_proprio_log = log10(n_proprio),
+         n_retweet_log = log10(n_retweet),
+         engaj_total_log = log10(engaj_total),
+         engaj_mediano_log = log10(engaj_mediano))
+```
+
+### 1 — Qual a relação entre as características da atuação do parlamentar e o engajamento total que ele obtém no Twitter?
+
+Inicialmente, cria-se um modelo linear em que o engajamento total é utilizado como variável dependente, enquanto as variáveis independentes são a casa do Congresso Nacional, o número de perfis seguidos, o número de seguidores, o número de *tweets* e o número de *retweets*. Vale salientar que os valores de todas as variáveis quantitativas foram transformados com a aplicação do **log10()**. A seguir, estão apresentadas algumas estatísticas encontradas para esse modelo.
+
+```{r warning = FALSE, message = FALSE, error = FALSE}
+total_engag_lm <- lm(engaj_total_log ~ casa + segue_log + seguidores_log + n_proprio_log + n_retweet_log,
+                   data = congress_tt_data)
+
+tidy(total_engag_lm)
+glance(total_engag_lm)
+```
+
+Considerando:
+
+* **ET:** A variável que expressa o engajamento total do parlamentar no Twitter.
+* **CS:** A variável *dummy* que assume valor 1 para senadores e 0 para deputados.
+* **SG:** A varíável que expressa o número de perfis seguidos pelo parlamentar no Twitter.
+* **SR:** A varíável que expressa o número de seguidores do parlamentar no Twitter.
+* **TW:** A varíável que expressa o número de *tweets* do parlamentar.
+* **RT:** A varíável que expressa o número de *retweets* do parlamentar.
+
+Com base nos resultados da regressão linear múltipla acima, as variáveis analisadas se relacionam através de um modelo com o seguinte formato:
+
+$\log_{10}(ET) = 0,86 \log_{10}(RT) + 0,56 \log_{10}(SR) + 0,53 \log_{10}(TW) - 0,29 \log_{10}(SG) - 0,07 CS + 0,53$ 
+
+Esse modelo é capaz de explicar **71,11%** da variância da variável independente (**R² = 0,7111606**). Portanto, o número de *retweets* e o número de seguidores são as variáveis independentes com maior impacto sobre o valor do engajamento total dos parlamentares, sendo este impacto positivo em ambos os casos.
+
+### 2 — Qual a relação entre as características da atuação do parlamentar e o engajamento mediano que ele obtém no Twitter?  
+
+```{r warning = FALSE, message = FALSE, error = FALSE}
+median_engag_lm <- lm(engaj_mediano_log ~ casa + segue_log + seguidores_log + n_proprio_log + n_retweet_log,
+                     data = congress_tt_data)
+
+tidy(median_engag_lm)
+glance(median_engag_lm)
+```
+
+Considerando:
+
+* **ET:** A variável que expressa o engajamento total do parlamentar no Twitter.
+* **CS:** A variável *dummy* que assume valor 1 para senadores e 0 para deputados.
+* **SG:** A varíável que expressa o número de perfis seguidos pelo parlamentar no Twitter.
+* **SR:** A varíável que expressa o número de seguidores do parlamentar no Twitter.
+* **TW:** A varíável que expressa o número de *tweets* do parlamentar.
+* **RT:** A varíável que expressa o número de *retweets* do parlamentar.
+
+Com base nos resultados da regressão linear múltipla acima, as variáveis analisadas se relacionam através de um modelo com o seguinte formato:
+
+$\log_{10}(EM) = 0,74 \log_{10}(SR) + 0,28 \log_{10}(RT) - 0,34 \log_{10}(SG) - 0,15 \log_{10}(TW) - 0,10 CS - 0,79$ 
+
+Esse modelo é capaz de explicar **56,53%** da variância da variável independente (**R² = 0,5653095**). Portanto, o número de seguidores e o número de perfis seguidos são as variáveis independentes com maior impacto sobre o valor do engajamento mediano dos parlamentares, sendo estes impactos positivo e negativo, respectivamente.
